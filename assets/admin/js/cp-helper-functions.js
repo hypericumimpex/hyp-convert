@@ -2148,6 +2148,16 @@ var step_id = 0,
 						target.attr( 'data-placeholder', hidden_input_name );
 					break;
 
+					case 'recaptcha-input':
+						var tr = target.closest( '.cp-field-html-data' ).html();
+						target.closest( '.cp-field-html-data' ).html( tr.replace( '{{backend_view}}', '<p> ' + cp_pro.recaptcha_field_text + ' </p>' ) );
+						var hidden_input_name = bmodel.getModalValue( for_edit, current_step, 'recaptcha_input_name' );
+						hidden_input_name = typeof hidden_input_name == 'undefined' ? target.attr( 'name' ) : hidden_input_name;
+
+						target.attr( 'placeholder', hidden_input_name );
+						target.attr( 'data-placeholder', hidden_input_name );
+					break;
+
 					case 'hidden-input-name':
 						target.attr( 'placeholder', value );
 						target.attr( 'data-placeholder', value );

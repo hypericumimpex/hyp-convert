@@ -27,6 +27,10 @@
 					'label' => __( 'Email Notification', 'convertpro' ),
 					'icon'  => 'email',
 				),
+				'recaptcha'      => array(
+					'label' => __( 'Recaptcha', 'convertpro' ),
+					'icon'  => 'update',
+				),
 				'advanced'       => array(
 					'label' => __( 'Advanced', 'convertpro' ),
 					'icon'  => 'admin-generic',
@@ -144,8 +148,8 @@
 											?>
 											</optgroup>
 									<?php
-								}
-								?>
+}
+?>
 										</select>
 										<select for="cp_global_font" class="cp-font-weights">
 								<?php
@@ -220,6 +224,9 @@
 		$display_adv_settings = false;
 
 		?>
+		<div class="cp-gen-set-content">
+			<?php require_once( CP_V2_BASE_DIR . 'admin/google-recaptcha.php' ); ?>
+		</div>
 		<div class="cp-gen-set-content">
 			<div class="cp-settings-container">
 				<?php

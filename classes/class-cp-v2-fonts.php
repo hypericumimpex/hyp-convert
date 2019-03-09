@@ -36,6 +36,9 @@ if ( ! class_exists( 'CP_V2_Fonts' ) ) {
 
 			$arr_fonts = array();
 
+			/* Default font filter added. */
+			$default_fonts = apply_filters( 'cp_add_custom_fonts', $default_fonts );
+
 			$google_fonts = apply_filters( 'cp_add_google_fonts', $google_fonts );
 
 			foreach ( $default_fonts as $font => $value ) {
@@ -1458,6 +1461,15 @@ if ( ! class_exists( 'CP_V2_Fonts' ) ) {
 			),
 			'Krona One'                => array(
 				'Normal',
+			),
+			'Krub'                     => array(
+				'Normal',
+				'200',
+				'300',
+				'400',
+				'500',
+				'600',
+				'700',
 			),
 			'Kurale'                   => array(
 				'Normal',

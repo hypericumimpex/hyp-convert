@@ -13,6 +13,10 @@ div.mce-tinymce-inline {
     width: 100% !important;
 }
 
+ul {
+    list-style-type: disc;
+    margin-left: 2em;
+}
 /*.cp-panel-item.tiny-active:hover,
 .cp-panel-item.tiny-active .cp-target:hover {
     cursor: auto !important;

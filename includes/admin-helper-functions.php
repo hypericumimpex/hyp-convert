@@ -433,14 +433,14 @@ function cp_get_insights_row( $style ) {
 						?>
 					</div>				
 					<?php
-				}
+}
 
 				$edit_data = 'data-ab-test="false"';
 
-				if ( $has_active_ab_test['status'] || $has_active_ab_test['completed_status'] ) {
-					$edit_data = 'data-ab-test="true"';
-				}
-				?>
+if ( $has_active_ab_test['status'] || $has_active_ab_test['completed_status'] ) {
+	$edit_data = 'data-ab-test="true"';
+}
+?>
 				<div class="cp-edit-settings" <?php echo $edit_data; ?>></div>
 			</div>
 		</div>

@@ -63,7 +63,7 @@ function cp_render_style_status( $style ) {
 		?>
 		<a href="<?php echo admin_url( 'admin.php?page=' . CP_PRO_SLUG . '-ab-test' ); ?>" class="cp-prog-label"><?php echo $test_name; ?></a>
 		<?php
-	}
+}
 }
 
 /**
@@ -625,8 +625,8 @@ function cp_get_style_info( $settings, $style_id, $title ) {
 				<?php } else { ?>
 					<li><?php _e( 'It will appear every time a visitor arrives on your website.', 'convertpro' ); ?></li>
 					<?php
-				}
-				?>
+}
+?>
 			</td>
 		</tr>
 			<?php

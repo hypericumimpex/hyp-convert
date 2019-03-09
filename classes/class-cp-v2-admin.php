@@ -36,7 +36,10 @@ final class CP_V2_Admin {
 
 		add_action( 'admin_init', array( $this, 'redirect_on_activation' ) );
 		add_action( 'admin_print_scripts', array( $this, 'deregister_scripts' ), 11 );
-
+		// WPBakery JS conflict code starts.
+		add_action( 'admin_print_scripts-post.php', array( $this, 'cp_wpbakery_deregister_scripts' ), 20 );
+		add_action( 'admin_print_scripts-post-new.php', array( $this, 'cp_wpbakery_deregister_scripts' ), 20 );
+		// WPBakery JS conflict code ends.
 		add_filter( 'plugin_action_links_' . CP_V2_DIR_NAME, array( $this, 'action_links' ), 10, 5 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ), 100 );
 		add_action( 'mce_external_plugins', array( $this, 'load_tiny_scripts' ), 10 );
@@ -46,6 +49,29 @@ final class CP_V2_Admin {
 		add_filter( 'bsf_allow_beta_updates_convertpro', array( $this, 'cpro_beta_updates_check' ) );
 		// Fix for Search Exclude plugin.
 		add_filter( 'searchexclude_filter_search', array( $this, 'cp_remove_filter_search' ), 10, 2 );
+	}
+
+	/**
+	 * Function Name: cp_wpbakery_deregister_scripts.
+	 * Function Description: WPBakery Deregister scripts which conflicts with Convert Pro
+	 *
+	 * @since 1.3.3
+	 */
+	function cp_wpbakery_deregister_scripts() {
+
+		if ( function_exists( 'get_current_screen' ) ) {
+
+			$screen = get_current_screen();
+
+			if ( ! empty( $screen ) ) {
+
+				if ( isset( $screen->base ) && 'post' == $screen->base && CP_CUSTOM_POST_TYPE == $screen->post_type ) {
+
+					wp_dequeue_script( 'vc-backend-min-js' );
+					wp_deregister_script( 'vc-backend-min-js' );
+				}
+			}
+		}
 	}
 
 	/**
@@ -497,6 +523,7 @@ final class CP_V2_Admin {
 				'country_filters'             => __( 'Specific Countries.', 'convertpro' ),
 				'post_types'                  => __( 'Select post types', 'convertpro' ),
 				'hidden_field_text'           => __( 'This is a hidden field.This text will not appear at frontend.', 'convertpro' ),
+				'recaptcha_field_text'        => __( 'This is a recaptcha field.This will appear at frontend.', 'convertpro' ),
 				'click_here'                  => __( 'Click Here', 'convertpro' ),
 				'search_settings'             => __( 'Search Settings...', 'convertpro' ),
 				'search_mailer'               => __( 'Search Mailer...', 'convertpro' ),

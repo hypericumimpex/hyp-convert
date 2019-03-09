@@ -105,7 +105,7 @@ class CP_Full_Screen extends cp_Framework {
 				'cp_sub_heading',
 				'cp_paragraph',
 			),
-			array( 'back_color', 'back_color_hover', 'title', 'text_hover_color', 'field_box_shadow', 'failed_message', 'submit_message_text_color', 'submit_message_bg_color', 'submit_message_layout', 'btn_url', 'btn_url_target', 'btn_url_follow', 'btn_step', 'field_action', 'submit_message', 'label_box_shadow', 'submit_message_font_size', 'label_border', 'border_style', 'border_width', 'border_color', 'border_hover_color', 'border_radius', 'field_padding', 'count_as_conversion' ),
+			array( 'back_color', 'back_color_hover', 'title', 'text_hover_color', 'field_box_shadow', 'failed_message', 'submit_message_text_color', 'submit_message_bg_color', 'submit_message_layout', 'btn_url', 'btn_url_target', 'btn_url_follow', 'btn_step', 'field_action', 'submit_message', 'label_box_shadow', 'submit_message_font_size', 'label_border', 'border_style', 'border_width', 'border_color', 'border_hover_color', 'border_radius', 'field_padding', 'count_as_conversion', 'get_parameter' ),
 			$options
 		);
 
@@ -159,7 +159,7 @@ class CP_Full_Screen extends cp_Framework {
 				'cp_custom_html',
 				'cp_video',
 			),
-			array( 'text_hover_color', 'back_color', 'back_color_hover', 'title', 'label_action', 'text_hover_color', 'failed_message', 'submit_message_text_color', 'submit_message_bg_color', 'submit_message_layout', 'btn_url', 'btn_url_target', 'btn_url_follow', 'btn_step', 'field_action', 'submit_message', 'submit_message_font_size', 'field_padding' ),
+			array( 'text_hover_color', 'back_color', 'back_color_hover', 'title', 'label_action', 'text_hover_color', 'failed_message', 'submit_message_text_color', 'submit_message_bg_color', 'submit_message_layout', 'btn_url', 'btn_url_target', 'btn_url_follow', 'btn_step', 'field_action', 'submit_message', 'submit_message_font_size', 'field_padding', 'get_parameter' ),
 			$options
 		);
 
@@ -1227,6 +1227,9 @@ class CP_Full_Screen extends cp_Framework {
 
 			// Form - Hidden Input Field.
 			parent::$cp_form_hiddeninput_opts,
+
+			// Form - Google Recaptcha Input Field.
+			parent::$cp_form_google_recaptcha_opts,
 
 			// Form - Date Field.
 			parent::$cp_form_date_opts,

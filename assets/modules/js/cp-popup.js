@@ -907,7 +907,6 @@ var t_id                = -1;
                 if ( invoke ) {
                     if ( '1' == ruleset.modal_exit_intent ) {
                         $this.createExitEvent( ruleset.hash );
-                        hasExitEvent[ruleset.hash] = true;
                     } else {
                         $this.invokePopup();
                     }

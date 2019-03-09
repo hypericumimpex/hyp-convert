@@ -706,6 +706,15 @@ body.wp-admin {
     text-align: center;
 }
 
+.cp-google-recaptcha-field p  {
+    width: 232px;
+    height: 59px;
+    color: #333;
+    background: #fff;
+    padding: 5px !important;
+    text-align: center;
+}
+
 .cp-popup-wrapper .panel-wrapper .cp-panel-item.cp-hidden-input-field {
     line-height: 1.4em;
     font-size: 13px;

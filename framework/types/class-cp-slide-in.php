@@ -1070,6 +1070,9 @@ class CP_Slide_In extends cp_Framework {
 			// Form - Hidden Input Field.
 			parent::$cp_form_hiddeninput_opts,
 
+			// Form - Google Recaptcha Input Field.
+			parent::$cp_form_google_recaptcha_opts,
+
 			// Form - Date Field.
 			parent::$cp_form_date_opts,
 

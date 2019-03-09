@@ -605,11 +605,11 @@ Triggers from different Ruleset works as OR',
 												<?php } ?>			
 												</div><!-- #cp-accordion -->
 											<?php
-										}
+}
 
 											$html .= $hidden_fields_html;
 										echo $html;
-										?>
+?>
 													<?php if ( 'Launch' == $panel_key && ( 'modal_popup' == $cp_module_type || 'info_bar' == $cp_module_type || 'slide_in' == $cp_module_type || 'welcome_mat' == $cp_module_type || 'full_screen' == $cp_module_type ) ) { ?>
 														<?php
 

@@ -196,6 +196,13 @@ if ( ! class_exists( 'Cp_Framework' ) ) {
 		public static $cp_form_hiddeninput_opts = array();
 
 		/**
+		 * Form - Google recaptcha Input Options.
+		 *
+		 * @var cp_form_google_recaptcha_opts
+		 */
+		public static $cp_form_google_recaptcha_opts = array();
+
+		/**
 		 * Form - Date Options.
 		 *
 		 * @var cp_form_date_opts

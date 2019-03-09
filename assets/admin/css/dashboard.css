@@ -731,6 +731,11 @@ input[type="text"]:focus {
     width: 500px;
 }
 
+/* Google Recaptcha fields */
+
+.cp-google-recaptcha-wrap input[type="text"] {
+    width: 500px;
+}
 
 .wp-admin.plugins_page_convertpro .cp-postbox-table select , 
 .wp-admin.plugins_page_convertpro .cp-postbox-table input[type="number"] {

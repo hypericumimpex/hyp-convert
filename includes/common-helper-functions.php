@@ -995,6 +995,19 @@ function cp_get_panel( $properties, $panel_id, $style_id ) {
 
 				break;
 
+			case 'cp_google_recaptcha':
+				$template_data = str_replace( '{{backend_view}}', '', $template_data );
+
+				if ( isset( $properties->recaptcha_input_name ) ) {
+					$template_data = str_replace( '{{name}}', $properties->recaptcha_input_name, $template_data );
+				}
+
+				if ( isset( $properties->recaptcha_input_value ) ) {
+					$template_data = str_replace( '{{value}}', $properties->recaptcha_input_value, $template_data );
+				}
+
+				break;
+
 			case 'cp_date':
 				$template_data = str_replace( 'readonly="{{readonly}}"', '', $template_data );
 				if ( isset( $properties->date_name ) ) {
@@ -1491,19 +1504,18 @@ function cp_get_panel( $properties, $panel_id, $style_id ) {
 }
 
 /**
- * Function Name: hex_to_rgb.
- * Function Description: hex_to_rgb.
+ * Function Name: cp_hex_to_rgb.
+ * Function Description: cp_hex_to_rgb.
  *
  * @param string $hex string parameter.
  */
-function hex_to_rgb( $hex ) {
+function cp_hex_to_rgb( $hex ) {
 	return array(
 		'r' => hexdec( substr( $hex, 0, 2 ) ),
 		'g' => hexdec( substr( $hex, 2, 2 ) ),
 		'b' => hexdec( substr( $hex, 4, 2 ) ),
 	);
 }
-
 
 /**
  * Function Name: cp_get_device_value.
@@ -1596,6 +1608,8 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 	$form_field_placeholder_webstyle = '';
 	$form_field_placeholder_mozstyle = '';
 	$form_field_focus_style          = '';
+	$date_hover_color                = '';
+	$date_selected_color             = '';
 
 	if ( strpos( $panel_id, 'form_field' ) !== false ) {
 		$style = '.cp_style_' . $style_id . ' .cp-popup .cpro-form .cp-form-input-field{ ';
@@ -1607,6 +1621,10 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 		$form_field_placeholder_webstyle .= '.cp_style_' . $style_id . ' .cp-popup .cpro-form .cp-form-input-field::-webkit-input-placeholder {';
 
 		$form_field_placeholder_mozstyle .= '.cp_style_' . $style_id . ' .cp-popup .cpro-form .cp-form-input-field::-moz-placeholder  {';
+
+		$date_hover_color .= '.cp_style_' . $style_id . ' .cp-popup .cpro-form .pika-lendar table tbody button:hover { ';
+
+		$date_selected_color .= '.cp_style_' . $style_id . ' .cp-popup .cpro-form .pika-lendar table tbody .is-selected .pika-button { ';
 	}
 
 	$extra_style       = '';
@@ -1863,6 +1881,7 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 								if ( 'placeholder' == $target ) {
 									$form_field_placeholder_webstyle .= $parameter . ':' . $val . ';';
 									$form_field_placeholder_mozstyle .= $parameter . ':' . $val . ';';
+									$date_hover_color                .= 'background :' . $val . ';';
 								}
 
 								$extra_style .= $parameter . ':' . $val . $unit . ';';
@@ -1949,6 +1968,8 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 
 							if ( strpos( $panel_id, 'form_field' ) !== false && 'color' == $parameter ) {
 								$form_field_select_field_style .= $parameter . ':' . $map_style_value . ';';
+								$date_selected_color           .= 'background :' . $map_style_value . ';';
+								$date_selected_color           .= 'box-shadow : inset 0 1px 3px ' . $map_style_value . ';';
 							}
 
 							if ( 'active-border-color' == $parameter && strpos( $panel_id, 'form_field' ) !== false ) {
@@ -2114,6 +2135,8 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 		$form_field_focus_style          .= '}';
 		$form_field_placeholder_webstyle .= '}';
 		$form_field_placeholder_mozstyle .= '}';
+		$date_hover_color                .= '}';
+		$date_selected_color             .= '}';
 	}
 
 	$style .= '.cp_style_' . $style_id . ' #' . $panel_id . '-' . $style_id . ' .cp-target:hover { ';
@@ -2122,7 +2145,7 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 
 	$style .= '}';
 
-	$style .= $extra_style . $field_style . $extra_hover_style . $form_field_select_field_style . $form_field_focus_style . $form_field_placeholder_webstyle . $form_field_placeholder_mozstyle;
+	$style .= $extra_style . $field_style . $extra_hover_style . $form_field_select_field_style . $form_field_focus_style . $form_field_placeholder_webstyle . $form_field_placeholder_mozstyle . $date_hover_color . $date_selected_color;
 
 	$style .= '.cp_style_' . $style_id . ' #' . $panel_id . '-' . $style_id . ' { ';
 
@@ -2254,6 +2277,10 @@ if ( ! function_exists( 'cp_render_popup' ) ) {
 
 		if ( strpos( $html, 'cp-date-field' ) ) {
 			cpro_enqueue_date_script();
+		}
+
+		if ( strpos( $html, 'cp-google-recaptcha' ) ) {
+			cpro_enqueue_google_recaptcha_script();
 		}
 
 		$cp_popups     = CP_V2_Popups::get_instance();
@@ -2599,6 +2626,10 @@ function cp_load_popup_content() {
 					cpro_enqueue_date_script();
 				}
 
+				if ( strpos( $html, 'cp-google-recaptcha' ) ) {
+					cpro_enqueue_google_recaptcha_script();
+				}
+
 				if ( cpro_is_current_device( $hide_on_device ) ) {
 					echo do_shortcode( '[cp_popup style_id = ' . $popup_id . ' step_id = "1" ][/cp_popup]' );
 				}
@@ -2628,6 +2659,16 @@ if ( ! function_exists( 'cpro_enqueue_date_script' ) ) {
 	function cpro_enqueue_date_script() {
 		wp_enqueue_style( 'cp-pikaday', CP_V2_BASE_URL . 'framework/fields/cp_date/pikaday.min.css' );
 		wp_enqueue_script( 'cp-pikaday', CP_V2_BASE_URL . 'framework/fields/cp_date/pikaday.min.js', array( 'cp-popup-script' ), '1.8.0', true );
+	}
+}
+
+if ( ! function_exists( 'cpro_enqueue_google_recaptcha_script' ) ) {
+	/**
+	 * Function Name: cpro_enqueue_google_recaptcha_script.
+	 * Function Description: Enqueue google recaptcha script.
+	 */
+	function cpro_enqueue_google_recaptcha_script() {
+		wp_enqueue_script( 'cp-google-recaptcha', 'https://www.google.com/recaptcha/api.js', array( 'cp-popup-script' ), null, true );
 	}
 }
 
@@ -2992,6 +3033,28 @@ function cp_v2_notify_admin() {
 		$can_user_see_errors = false;
 	}
 
+	// Google recaptcha secret key verification starts.
+	$cp_google_recaptcha_verify = isset( $_POST['cp_google_recaptcha_verify'] ) ? 0 : 1;
+
+	if ( ! $cp_google_recaptcha_verify ) {
+
+		$google_recaptcha = isset( $_POST['g-recaptcha-response'] ) && 1 ? $_POST['g-recaptcha-response'] : '';
+
+		$google_recaptcha_secret_key = get_option( 'cp_google_recaptcha_secret_key' );
+
+		// calling google recaptcha api.
+		$google_response = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify?secret=' . $google_recaptcha_secret_key . '&response=' . $google_recaptcha . '&remoteip=' . $_SERVER['REMOTE_ADDR'] );
+		// validating result.
+		$decode_google_response = json_decode( $google_response );
+
+		if ( false == $decode_google_response->success ) {
+			$response['error'] = true;
+			wp_send_json_error( $response );
+		} else {
+			$response['error'] = false;
+		}
+	}
+	// Google recaptcha secret key verification ends.
 	$email_meta = ( ! empty( $email_meta ) ) ? call_user_func_array( 'array_merge', $email_meta ) : array();
 
 	if ( ! empty( $email_meta ) && '1' == $email_meta['enable_notification'] ) {

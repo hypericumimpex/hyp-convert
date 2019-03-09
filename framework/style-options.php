@@ -21,6 +21,8 @@ $shortcode = '[cp_popup display="inline" style_id="' . $style . '" step_id = "' 
 /*** Array contains optin form options */
 $optin_form = array();
 
+
+$recaptcha_setting_link = 'You can set reCaptcha Site Key and Secret Key <a rel="noopener" target="_blank" href="' . CP_V2_Tab_Menu::get_page_url( 'general-settings' ) . '#recaptcha">here.</a>';
 /*** Array contains Configure options */
 $configure = array(
 	array(
@@ -4959,6 +4961,76 @@ $collect = apply_filters( 'cp_collect_option', $collect );
 
 	$cp_form_hiddeninput_options = apply_filters( 'cp_form_hiddeninput_options', $cp_form_hiddeninput_options );
 
+	$cp_form_google_recaptcha_options = array(
+		'type'         => 'cp_google_recaptcha',
+		'class'        => '',
+		'name'         => 'cp_google_recaptcha',
+		'opts'         => array(
+			'title'          => __( 'Recaptcha Info', 'convertpro' ),
+			'value'          => '',
+			'description'    => '',
+			'tags'           => 'input,email,form fields,hidden',
+			'resize'         => true,
+			'show_on_mobile' => false,
+		),
+		'sections'     => array(
+			array(
+				'title'  => 'Recaptcha Info',
+				'params' => array(
+					array(
+						'id'            => 'recaptcha_input_name',
+						'name'          => 'recaptcha_input_name',
+						'type'          => 'text',
+						'label'         => __( 'Name', 'convertpro' ),
+						'default_value' => 'recaptcha field',
+						'suffix'        => '',
+						'map'           => array(
+							'attr'   => 'name',
+							'target' => '.cp-target',
+						),
+						'map_style'     => array(
+							'parameter' => 'hidden-input-name',
+						),
+					),
+					array(
+						'id'            => 'recaptcha_input_value',
+						'name'          => 'recaptcha_input_value',
+						'type'          => 'hidden',
+						'label'         => __( 'Recaptcha Site key', 'convertpro' ),
+						'default_value' => get_option( 'cp_google_recaptcha_site_key' ),
+						'suffix'        => '',
+						'map_style'     => array(
+							'parameter' => 'recaptcha-input',
+						),
+						'map'           => array(
+							'attr'   => 'value',
+							'target' => '.cp-target',
+						),
+					),
+					array(
+						'id'    => 'recaptcha_setting_link',
+						'name'  => 'recaptcha_setting_link',
+						'type'  => 'label',
+						'label' => /* translators:%s module name .*/
+						sprintf( __( '%s ', 'convertpro' ), $recaptcha_setting_link ),
+						'map'   => array(
+							'attr'   => 'placeholder',
+							'target' => '.cp-target',
+						),
+					),
+				),
+			),
+		),
+
+		'panel'        => 'Form',
+		'section'      => 'Design',
+		'has_params'   => true,
+		'category'     => 'Form Fields',
+		'section_icon' => 'cp-icon-field',
+	);
+
+	$cp_form_google_recaptcha_options = apply_filters( 'cp_form_google_recaptcha_options', $cp_form_google_recaptcha_options );
+
 	$cp_form_date_options = array(
 		'type'         => 'cp_date',
 		'class'        => '',
@@ -5877,15 +5949,16 @@ $collect = apply_filters( 'cp_collect_option', $collect );
 	cp_Framework::$cp_countdown_opts   = $cp_countdown_options;
 
 	// Set default for Form Panel.
-	cp_Framework::$cp_form_email_opts         = $cp_form_email_options;
-	cp_Framework::$cp_form_name_opts          = $cp_form_name_options;
-	cp_Framework::$cp_form_phone_opts         = $cp_form_phone_options;
-	cp_Framework::$cp_form_dropdown_opts      = $cp_form_dropdown_options;
-	cp_Framework::$cp_form_textarea_opts      = $cp_form_textarea_options;
-	cp_Framework::$cp_form_radio_opts         = $cp_form_radio_options;
-	cp_Framework::$cp_form_checkbox_opts      = $cp_form_checkbox_options;
-	cp_Framework::$cp_form_hiddeninput_opts   = $cp_form_hiddeninput_options;
-	cp_Framework::$cp_form_date_opts          = $cp_form_date_options;
-	cp_Framework::$cp_button_flatbtn_opts     = $cp_button_flatbtn_options;
-	cp_Framework::$cp_button_gradientbtn_opts = $cp_button_gradientbtn_options;
-	cp_Framework::$cp_video_options           = $video_options;
+	cp_Framework::$cp_form_email_opts            = $cp_form_email_options;
+	cp_Framework::$cp_form_name_opts             = $cp_form_name_options;
+	cp_Framework::$cp_form_phone_opts            = $cp_form_phone_options;
+	cp_Framework::$cp_form_dropdown_opts         = $cp_form_dropdown_options;
+	cp_Framework::$cp_form_textarea_opts         = $cp_form_textarea_options;
+	cp_Framework::$cp_form_radio_opts            = $cp_form_radio_options;
+	cp_Framework::$cp_form_checkbox_opts         = $cp_form_checkbox_options;
+	cp_Framework::$cp_form_hiddeninput_opts      = $cp_form_hiddeninput_options;
+	cp_Framework::$cp_form_google_recaptcha_opts = $cp_form_google_recaptcha_options;
+	cp_Framework::$cp_form_date_opts             = $cp_form_date_options;
+	cp_Framework::$cp_button_flatbtn_opts        = $cp_button_flatbtn_options;
+	cp_Framework::$cp_button_gradientbtn_opts    = $cp_button_gradientbtn_options;
+	cp_Framework::$cp_video_options              = $video_options;

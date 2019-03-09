@@ -1,3 +1,18 @@
+Version 1.3.3 March 04, 2019
+
+- New: Google reCAPTCHA field.                          
+- New: Google Fonts - 'Krub' font added.
+- New: Filter to add Custom Fonts.                
+- Improvement: Form field 'name' added to panel.        
+- Improvement: Date selector color.                     
+- Fix: Bullet list not appearing in editor.             
+- Fix: Convert Mat CTA - extra action tab removed.      
+- Fix: Full Screen CTA - extra action tab removed.      
+- Fix: Widget Box CTA - extra action tab removed.       
+- Fix: Exit Intent with Scroll - ruleset error.         
+- Fix: Conflict with WPBakery Page Builder.
+- Fix: Conflict with Spider Event Calendar.
+
 Version 1.3.2 January 22, 2019
 
 - New: Checkbox size option.

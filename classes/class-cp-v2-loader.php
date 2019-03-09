@@ -180,6 +180,8 @@ if ( ! class_exists( 'Cp_V2_Loader' ) ) {
 			define( 'BSF_REMOVE_CONVERTPLUG_PRO_FROM_REGISTRATION_LISTING', true );
 			define( 'CP_PRO_NAME', 'Convert Pro' );
 			define( 'CP_PRO_SLUG', 'convert-pro' );
+			define( 'CP_GOOGLE_RECAPTCHA_SITE_KEY', 'Google Recaptcha Site Key' );
+			define( 'CP_GOOGLE_RECAPTCHA_SECRET_KEY', 'Google Recaptcha Secret Key' );
 			define( 'CP_POWERED_BY_URL', 'https://www.convertpro.net/?utm_source=customer-website&utm_medium=credit-link&utm_campaign=powered-by' );
 			define( 'CP_KNOWLEDGE_BASE_URL', 'https://www.convertpro.net/docs/' );
 			define( 'CP_SUPPORT_URL', 'https://www.convertpro.net/submit-a-ticket/' );

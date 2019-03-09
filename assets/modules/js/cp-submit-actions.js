@@ -181,6 +181,25 @@
 
 				var button_field = currentBtn.find('.cp-button-field');
 
+				var google_recaptcha = thisForm.find('.g-recaptcha');
+
+				if( google_recaptcha.length > 0 ) {
+// var client_side_response = grecaptcha.getResponse(); // returns a null if reCaptcha is not validated on client side, else is returns a value.
+
+					var client_side_response = thisForm.find( '[name="g-recaptcha-response"]' ).val();
+
+					if ( client_side_response.length === 0 ) {
+						thisForm.find( '.recaptcha-msg-error' ).text( "reCAPTCHA is Mandatory" );
+						if( !google_recaptcha.hasClass( "error" ) ){
+							google_recaptcha.addClass( "error" );
+						}
+						return;
+					} else {
+						thisForm.find('.recaptcha-msg-error' ).text('');
+						google_recaptcha.removeClass( "error" );
+					}
+				}
+
 				if( currentBtn.attr( 'data-type' ) == 'cp_button' || currentBtn.attr( 'data-type' ) == 'cp_gradient_button' ) {
 
 					currObj = currentBtn;
@@ -292,6 +311,10 @@
 								if( 'Invalid email address.' == result.error ) {
 									error_msg = 'Invalid Email Address';
 									invalid_email = true;
+								}
+
+								if( true == result.error ) {
+									error_msg = 'Google Recaptcha Secret Key Not Valid!!!! Please contact web administrator.';
 								}
 
 								is_success = false;
@@ -647,6 +670,27 @@
 								}
 							}
 						} );
+
+						// Google Recaptcha validate starts here.
+						var google_recaptcha = btn.closest('.cpro-form-container').find('.g-recaptcha');
+
+						if( google_recaptcha.length > 0) {
+
+							var client_side_response = btn.closest('.cpro-form-container').find('[name="g-recaptcha-response"]').val();
+							
+							if (client_side_response.length === 0) {
+							
+								btn.closest('.cpro-form-container').find('.recaptcha-msg-error').text( "reCAPTCHA is Mandatory" );
+							
+								if( !google_recaptcha.hasClass( "error" ) ){
+									google_recaptcha.addClass( "error" );
+								}
+								return false;
+							} else {
+								btn.closest('.cpro-form-container').find('.recaptcha-msg-error' ).text('');
+								google_recaptcha.removeClass( "error" );
+							}
+						}// Google Recaptcha validate ends here.
 
 						if( all_inputs.length > 0 ) {
 							var proceed_to_next_step = true;

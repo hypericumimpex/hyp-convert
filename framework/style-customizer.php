@@ -783,11 +783,16 @@ Triggers from different Ruleset works as OR',
 						$credit_enable = esc_attr( get_option( 'cp_credit_option' ) );
 
 						if ( ( 'modal_popup' == $cp_module_type || 'full_screen' == $cp_module_type ) && '0' != $credit_enable ) {
-							$credit_text = apply_filters( 'cppro_credit_text', sprintf( esc_attr( 'Powered by %s', 'convertpro' ), CPRO_BRANDING_NAME ) );
-							$link_color  = cpro_get_style_settings( $style_id, 'design', 'credit_link_color' );
+							$credit_text         = apply_filters( 'cppro_credit_text', sprintf( esc_attr( 'Powered by %s', 'convertpro' ), CPRO_BRANDING_NAME ) );
+							$link_color          = cpro_get_style_settings( $style_id, 'design', 'credit_link_color' );
+							$branding_agency_url = ( ! is_multisite() ) ? esc_url( get_option( 'cpro_branding_plugin_author_url' ) ) : esc_url( get_site_option( '_cpro_branding_plugin_author_url' ) );
+							if ( defined( 'CPRO_CUSTOM_AUTHOR_URL' ) ) {
+								$branding_agency_url = esc_url( CPRO_CUSTOM_AUTHOR_URL );
+							}
+							$cp_powered_by_url = false == $branding_agency_url ? CP_POWERED_BY_URL : $branding_agency_url;
 							?>
 							<div class="cp-credit-link cp-responsive">
-								<a class="cp-credit-link" style="color: <?php echo $link_color; ?>;" href="<?php echo CP_POWERED_BY_URL; ?>" target="_blank" rel="noopener"><span> <?php echo $credit_text; ?> </span></a>
+								<a class="cp-credit-link" style="color: <?php echo $link_color; ?>;" href="<?php echo $cp_powered_by_url; ?>" target="_blank" rel="noopener"><span> <?php echo $credit_text; ?> </span></a>
 							</div>
 
 							<?php

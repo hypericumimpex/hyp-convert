@@ -505,7 +505,16 @@ var ConvertProFieldEvents = '';
 									return;
 								}
 
-								if( $this.closest(".fields-panel").closest('.cp-element-container').hasClass('has-preset') ) {
+								if( $this.closest(".cp-connect-integration-wrap").closest('.cp-element-container').hasClass('skip-search') ) {
+
+									$this.closest('.cp-panel-content').show();
+									$this.closest(".cp-connect-integration-wrap").closest(".cp-element-container.skip-search").show();
+									$this.show();
+
+									if( $this.parent().hasClass('cp-md-trigger') ) {
+					                    $this.parent().show();
+                					}
+            					}else if( $this.closest(".fields-panel").closest('.cp-element-container').hasClass('has-preset') ) {
 
 									$this.closest('.cp-panel-content').show();
 									$this.closest(".fields-panel").closest(".cp-element-container.has-preset").show();
@@ -584,7 +593,16 @@ var ConvertProFieldEvents = '';
 			) {
 				search_section.hide();
 			} else {
-				if( section == 'design' ) {
+				if( section == 'design' || ( section == 'connect' && panel == 'connect' ) ) {
+					if( section == 'connect' && panel == 'connect' ){
+						$( '#field-search' ).attr("placeholder", "Search Connections...");
+						var connect_check = $('.cp-customizer-tabs-wrapper').find("input[name='cp_connect_settings']").val();
+						if( connect_check != -1) {
+							search_section.hide();
+						} else {
+							search_section.show();
+						}
+					}
 					if( $( 'html' ).hasClass( 'cp-mobile-device' ) ) {
 						search_section.hide();
 					} else {

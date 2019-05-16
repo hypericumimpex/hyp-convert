@@ -313,7 +313,15 @@ final class CP_V2_Popups {
 
 		global $post;
 		wp_reset_postdata();
+		// Restore the original current post.
+		//
+		// Note that wp_reset_postdata() isn't enough because it resets the current post by using the main
+		// query, but it doesn't take into account the possibility that it might have been overridden by a
+		// third-party plugin in the meantime.
+		//
+		// Specifically, this used to cause problems with Toolset Views, when its Conent Templates were used.
 		$post = $this->current_post;
+		setup_postdata( $this->current_post );
 	}
 
 	/**

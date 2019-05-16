@@ -248,6 +248,18 @@ final class CP_V2_Admin {
 		if ( ( 'edit' == $current_screen->base && CP_CUSTOM_POST_TYPE == $current_screen->post_type ) || ( ( 'post-new.php' == $hook || 'post.php' == $hook ) && ( isset( $post->post_type ) && CP_CUSTOM_POST_TYPE == $post->post_type ) ) ) {
 			if ( ( isset( $_GET['post'] ) && isset( $_GET['action'] ) && 'edit' == $_GET['action'] ) || 'add' == $current_screen->action ) {
 
+				// Fix Switching Product plugin JS Conflicts.
+				wp_dequeue_script( 'swProductAdminJs' );
+
+				// Fix WooCommerce Store Exporter Deluxe plugin JS Conflicts.
+				wp_dequeue_script( 'woo_ce_scripts' );
+
+				// Fix Multi Rating plugin JS Conflicts.
+				wp_dequeue_script( 'mr-admin-script' );
+
+				// Fix Showcase pro(Child theme of Genesis Parent theme) theme JS Conflicts.
+				wp_dequeue_script( 'showcase_notice_script' );
+
 				// Fix All in one schema rich snippets plugin JS Conflicts.
 				wp_dequeue_script( 'bsf-scripts' );
 

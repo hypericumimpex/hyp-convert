@@ -2267,6 +2267,24 @@ $collect = apply_filters( 'cp_collect_option', $collect );
 							'parameter' => 'countdown_text_color',
 						),
 					),
+					array(
+						'id'             => 'countdown_text_align',
+						'name'           => 'countdown_text_align',
+						'type'           => 'text_align',
+						'label'          => __( 'Text Alignment', 'convertpro' ),
+						'default_value'  => 'center',
+						'options'        => array(
+							'center'  => __( 'center', 'convertpro' ),
+							'left'    => __( 'left', 'convertpro' ),
+							'right'   => __( 'right', 'convertpro' ),
+							'justify' => __( 'justify', 'convertpro' ),
+						),
+						'map_style'      => array(
+							'parameter' => 'countdown_text_align',
+							'target'    => '.cp-target .cp-countdown-holding',
+						),
+						'show_on_mobile' => true,
+					),
 				),
 			),
 			array(

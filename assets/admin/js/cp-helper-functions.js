@@ -2262,7 +2262,7 @@ var step_id = 0,
 							$('#panel-img-after-css').remove();
 
 							$('#'+for_edit).css( "background-color", value );
-
+							value = 'unset';
 							$( "<style id='panel-img-after-css'>#" + for_edit + "::before { background-color:" + value + "; }</style>" ).appendTo( "head" );
 						}
 
@@ -2335,6 +2335,7 @@ var step_id = 0,
 								var	bg_size   = bg_option[2];
 
 								$('#'+for_edit).css({
+									'background-blend-mode':'overlay',
 									'background-repeat': bg_repeat,
 									'background-position': bg_pos,
 									'background-size': bg_size,
@@ -2777,6 +2778,15 @@ var step_id = 0,
 						var text_font_size = '#' + for_edit + ' .cp-countdown-unit { font-size: ' + value + ' }';
 						$( '#cp-countdown-text-font-size-' + for_edit ).remove();
 						$( 'head' ).append( '<style id="cp-countdown-text-font-size-' + for_edit + '" type="text/css">' + text_font_size + '</style>' );
+						break;
+
+					case 'countdown-text-align':
+						if( 'justify' == value )
+							value = 'auto';
+						var text_align = '#' + for_edit + ' .cp-countdown-holding { text-align: -webkit-' + value + ' }';
+
+						$( '#cp-countdown-holding-' + for_edit ).remove();
+						$( 'head' ).append( '<style id="cp-countdown-holding-' + for_edit + '" type="text/css">' + text_align + '</style>' );
 						break;
 
 					case 'countdown-border-style':

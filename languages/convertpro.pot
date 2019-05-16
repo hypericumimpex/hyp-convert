@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Convert Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Convert Pro 1.3.3\n"
+"Project-Id-Version: Convert Pro 1.3.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/convertpro\n"
-"POT-Creation-Date: 2019-03-04 06:20:53+00:00\n"
+"POT-Creation-Date: 2019-05-15 12:52:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,30 +72,30 @@ msgstr ""
 msgid "Branding"
 msgstr ""
 
-#: admin/branding.php:46
+#: admin/branding.php:50
 msgid "Plugin Name"
 msgstr ""
 
-#: admin/branding.php:55
+#: admin/branding.php:59
 msgid "Plugin Description"
 msgstr ""
 
-#: admin/branding.php:64
+#: admin/branding.php:68
 msgid "Author / Agency Name"
 msgstr ""
 
-#: admin/branding.php:73
+#: admin/branding.php:77
 msgid "Author / Agency URL"
 msgstr ""
 
-#: admin/branding.php:82
+#: admin/branding.php:86
 msgid "Enable Knowledge Base URL"
 msgstr ""
 
-#: admin/branding.php:88 admin/branding.php:111 admin/branding.php:135
-#: admin/branding.php:161 admin/general-settings.php:189
-#: admin/general-settings.php:292 admin/general-settings.php:306
-#: admin/general-settings.php:320 admin/general-settings.php:335
+#: admin/branding.php:92 admin/branding.php:115 admin/branding.php:139
+#: admin/branding.php:165 admin/branding.php:189 admin/general-settings.php:195
+#: admin/general-settings.php:298 admin/general-settings.php:312
+#: admin/general-settings.php:326 admin/general-settings.php:341
 #: framework/style-options.php:35 framework/style-options.php:76
 #: framework/style-options.php:92 framework/style-options.php:134
 #: framework/style-options.php:172 framework/style-options.php:406
@@ -103,10 +103,10 @@ msgstr ""
 msgid "ON"
 msgstr ""
 
-#: admin/branding.php:88 admin/branding.php:111 admin/branding.php:135
-#: admin/branding.php:161 admin/general-settings.php:189
-#: admin/general-settings.php:292 admin/general-settings.php:306
-#: admin/general-settings.php:320 admin/general-settings.php:335
+#: admin/branding.php:92 admin/branding.php:115 admin/branding.php:139
+#: admin/branding.php:165 admin/branding.php:189 admin/general-settings.php:195
+#: admin/general-settings.php:298 admin/general-settings.php:312
+#: admin/general-settings.php:326 admin/general-settings.php:341
 #: framework/style-options.php:36 framework/style-options.php:77
 #: framework/style-options.php:93 framework/style-options.php:135
 #: framework/style-options.php:173 framework/style-options.php:407
@@ -114,52 +114,60 @@ msgstr ""
 msgid "OFF"
 msgstr ""
 
-#: admin/branding.php:94
+#: admin/branding.php:98
 msgid "Knowledge Base URL"
 msgstr ""
 
-#: admin/branding.php:95
+#: admin/branding.php:99
 msgid "Enable this option to display Knowledge Base link in Help tab."
 msgstr ""
 
-#: admin/branding.php:104
+#: admin/branding.php:108
 msgid "Enable Contact Support URL"
 msgstr ""
 
-#: admin/branding.php:117
+#: admin/branding.php:121
 msgid "Contact Support URL"
 msgstr ""
 
-#: admin/branding.php:118
+#: admin/branding.php:122 admin/branding.php:158
 msgid "Enable this option to display support link in Help tab."
 msgstr ""
 
-#: admin/branding.php:127
+#: admin/branding.php:131
 msgid "Hide refresh template cloud option"
 msgstr ""
 
-#: admin/branding.php:128
+#: admin/branding.php:132
 msgid ""
 "Enable this option to hide refresh template cloud option for "
 "call-to-actions."
 msgstr ""
 
-#: admin/branding.php:142
+#: admin/branding.php:146
 msgid "Plugin Addon Description"
 msgstr ""
 
-#: admin/branding.php:153
+#: admin/branding.php:157
+msgid "Enable Custom Image"
+msgstr ""
+
+#: admin/branding.php:171
+msgid "Custom Image URL"
+msgstr ""
+
+#: admin/branding.php:181
 msgid "Hide White Label Settings"
 msgstr ""
 
-#: admin/branding.php:154
+#: admin/branding.php:182
 msgid ""
 "Enable this option to hide White Label settings. Re-activate the plugin to "
 "enable this form again."
 msgstr ""
 
-#: admin/branding.php:171 admin/email-template.php:60
-#: admin/general-settings.php:198 admin/general-settings.php:345
+#: admin/branding.php:200 admin/email-template.php:60
+#: admin/general-settings.php:204 admin/general-settings.php:351
 #: admin/google-recaptcha.php:47
 msgid "Save Settings"
 msgstr ""
@@ -219,8 +227,8 @@ msgstr ""
 #: admin/bsf-core/BSF_License_Manager.php:614
 #: framework/classes/class-cp-framework.php:819
 #: framework/style-options.php:1445 framework/style-options.php:1607
-#: framework/style-options.php:2752 framework/style-options.php:2881
-#: framework/style-options.php:5329 framework/style-options.php:5750
+#: framework/style-options.php:2770 framework/style-options.php:2899
+#: framework/style-options.php:5347 framework/style-options.php:5768
 #: framework/types/class-cp-full-screen.php:1002
 #: framework/types/class-cp-full-screen.php:1186
 #: framework/types/class-cp-welcome-mat.php:1022
@@ -228,29 +236,29 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:573
+#: admin/bsf-core/BSF_Update_Manager.php:503
 msgid ""
 " <br>This plugin is came bundled with the <i>%1$s</i>. For receiving "
 "updates, you need to register license of <i>%2$s</i> <a "
 "href=\"%3$s\">here</a>."
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:575
+#: admin/bsf-core/BSF_Update_Manager.php:505
 msgid " <i>Click <a href=\"%1$s\">here</a> to activate your license.</i>"
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:639
-#: admin/bsf-core/BSF_Update_Manager.php:666
+#: admin/bsf-core/BSF_Update_Manager.php:569
+#: admin/bsf-core/BSF_Update_Manager.php:596
 msgid ""
 "Click <a target=\"_blank\" href=\"%1$1s\">here</a> to activate license of "
 "<i>%2$2s</i> to receive automatic updates."
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:645
+#: admin/bsf-core/BSF_Update_Manager.php:575
 msgid "Activate license of <i>%2s</i> to receive automatic updates."
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:651
+#: admin/bsf-core/BSF_Update_Manager.php:581
 msgid ""
 "This plugin is came bundled with the <i>%1$1s</i>. For receiving updates, "
 "you need to register license of <i>%2$2s</i> <a target=\"_blank\" "
@@ -376,7 +384,7 @@ msgid ""
 "your issues resolved."
 msgstr ""
 
-#: admin/bsf-core/auto-update/index.php:685 includes/class-bsf-menu.php:290
+#: admin/bsf-core/auto-update/index.php:685 includes/class-bsf-menu.php:350
 msgid "Request Support"
 msgstr ""
 
@@ -408,46 +416,46 @@ msgstr ""
 msgid "iMedica Extensions"
 msgstr ""
 
-#: admin/bsf-core/index.php:825
+#: admin/bsf-core/index.php:832
 msgid " requires following plugins to be active : "
 msgstr ""
 
-#: admin/bsf-core/index.php:835
+#: admin/bsf-core/index.php:842
 msgid " requires following plugins to be installed and activated : "
 msgstr ""
 
-#: admin/bsf-core/index.php:844
+#: admin/bsf-core/index.php:851
 msgid "Begin activating plugins"
 msgstr ""
 
-#: admin/bsf-core/index.php:848
+#: admin/bsf-core/index.php:855
 msgid "Begin installing plugins"
 msgstr ""
 
-#: admin/bsf-core/index.php:851
+#: admin/bsf-core/index.php:858
 msgid "Dismiss This Notice"
 msgstr ""
 
-#: admin/bsf-core/index.php:877
+#: admin/bsf-core/index.php:884
 msgid ""
 "Looks like you are on a WordPress Multisite, you will need to install and "
 "network activate %1$s Brainstorm Updater for Multisite %2$s plugin. "
 "Download it from %3$s here %4$s"
 msgstr ""
 
-#: admin/bsf-core/index.php:1194
+#: admin/bsf-core/index.php:1201
 msgid "WordPress Environment"
 msgstr ""
 
-#: admin/bsf-core/index.php:1298
+#: admin/bsf-core/index.php:1305
 msgid "Server Environment"
 msgstr ""
 
-#: admin/bsf-core/index.php:1402
+#: admin/bsf-core/index.php:1409
 msgid "Theme Information"
 msgstr ""
 
-#: admin/bsf-core/index.php:1422
+#: admin/bsf-core/index.php:1429
 msgid "Installed Plugins"
 msgstr ""
 
@@ -507,7 +515,7 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: admin/create-new.php:83 classes/class-cp-v2-admin.php:693
+#: admin/create-new.php:83 classes/class-cp-v2-admin.php:705
 msgid "Delete Template Data"
 msgstr ""
 
@@ -592,126 +600,126 @@ msgid "Recaptcha"
 msgstr ""
 
 #: admin/general-settings.php:35 framework/classes/class-cp-framework.php:1016
-#: framework/style-options.php:2489
+#: framework/style-options.php:2507
 msgid "Advanced"
 msgstr ""
 
-#: admin/general-settings.php:62
+#: admin/general-settings.php:68
 msgid "General Settings"
 msgstr ""
 
-#: admin/general-settings.php:94
+#: admin/general-settings.php:100
 msgid "Top-Level (top)"
 msgstr ""
 
-#: admin/general-settings.php:95
+#: admin/general-settings.php:101
 msgid "Top-Level (middle)"
 msgstr ""
 
-#: admin/general-settings.php:96
+#: admin/general-settings.php:102
 msgid "Top-Level (bottom)"
 msgstr ""
 
-#: admin/general-settings.php:119
+#: admin/general-settings.php:125
 msgid "Global Font "
 msgstr ""
 
-#: admin/general-settings.php:120
+#: admin/general-settings.php:126
 msgid ""
 "Controls font of your call-to-action. This font will be overwritten by "
 "individual element's typography option."
 msgstr ""
 
-#: admin/general-settings.php:171
+#: admin/general-settings.php:177
 msgid "User Inactivity Time "
 msgstr ""
 
-#: admin/general-settings.php:172
+#: admin/general-settings.php:178
 msgid ""
 "This is the time considered to track user inactivity, when you activate the "
 "user inactivity trigger."
 msgstr ""
 
-#: admin/general-settings.php:176
+#: admin/general-settings.php:182
 msgid " Seconds"
 msgstr ""
 
-#: admin/general-settings.php:181
+#: admin/general-settings.php:187
 msgid "Show Credit Link"
 msgstr ""
 
-#: admin/general-settings.php:182
+#: admin/general-settings.php:188
 msgid ""
 "By enabling this, you agree to display a tiny credit link over the overlay "
 "when a popup is displayed."
 msgstr ""
 
-#: admin/general-settings.php:239
+#: admin/general-settings.php:245
 msgid "Advanced Settings"
 msgstr ""
 
-#: admin/general-settings.php:245
+#: admin/general-settings.php:251
 msgid "Admin Menu Position "
 msgstr ""
 
-#: admin/general-settings.php:247
+#: admin/general-settings.php:253
 #. translators: %s: Convert Pro Name
 msgid "%s will be listed under the menu you select here."
 msgstr ""
 
-#: admin/general-settings.php:255
+#: admin/general-settings.php:261
 #. translators: %s percentage
 msgid "Allow %s For"
 msgstr ""
 
-#: admin/general-settings.php:256
+#: admin/general-settings.php:262
 #. translators: %s percentage
 msgid ""
 "The site administrator has complete access to %s. Select the user roles you "
 "wish to grant access to."
 msgstr ""
 
-#: admin/general-settings.php:284
+#: admin/general-settings.php:290
 msgid "Add Antispam field to the form"
 msgstr ""
 
-#: admin/general-settings.php:285
+#: admin/general-settings.php:291
 msgid ""
 "Enabling this will add an antispam field to all call-to-action forms. "
 "Convert Pro uses Honeypot field technique to fight spam."
 msgstr ""
 
-#: admin/general-settings.php:298
+#: admin/general-settings.php:304
 msgid "Developer Mode "
 msgstr ""
 
-#: admin/general-settings.php:299
+#: admin/general-settings.php:305
 msgid ""
 "Enabling this will help you debug an issue with a particular design by "
 "viewing the respective CSS/JS file associated with it."
 msgstr ""
 
-#: admin/general-settings.php:312
+#: admin/general-settings.php:318
 msgid "Allow Beta Updates "
 msgstr ""
 
-#: admin/general-settings.php:313
+#: admin/general-settings.php:319
 msgid "Enable this option to receive update notifications for beta versions."
 msgstr ""
 
-#: admin/general-settings.php:327
+#: admin/general-settings.php:333
 msgid "Allow images load on document ready "
 msgstr ""
 
-#: admin/general-settings.php:328
+#: admin/general-settings.php:334
 msgid "Enable this option to load images on load of document."
 msgstr ""
 
-#: admin/general-settings.php:358
+#: admin/general-settings.php:364
 msgid "Cache"
 msgstr ""
 
-#: admin/general-settings.php:359
+#: admin/general-settings.php:365
 msgid ""
 "HTML data of your call-to-action is dynamically generated and cached each "
 "time you create or edit a call-to-action. There might be chances that cache "
@@ -720,7 +728,7 @@ msgid ""
 "clicking the button below."
 msgstr ""
 
-#: admin/general-settings.php:361 classes/class-cp-v2-admin.php:232
+#: admin/general-settings.php:367 classes/class-cp-v2-admin.php:232
 msgid "Clear Cache"
 msgstr ""
 
@@ -778,7 +786,8 @@ msgstr ""
 msgid "Call-to-action"
 msgstr ""
 
-#: admin/insights.php:105 admin/insights.php:275 includes/class-bsf-menu.php:87
+#: admin/insights.php:105 admin/insights.php:275
+#: includes/class-bsf-menu.php:125
 msgid "Create New"
 msgstr ""
 
@@ -791,7 +800,7 @@ msgid "Edit"
 msgstr ""
 
 #: admin/insights.php:120 admin/insights.php:372
-#: classes/class-cp-v2-admin.php:542
+#: classes/class-cp-v2-admin.php:554
 msgid "Duplicate"
 msgstr ""
 
@@ -826,7 +835,7 @@ msgid "Insight"
 msgstr ""
 
 #: admin/insights.php:201 framework/style-options.php:1429
-#: framework/style-options.php:5513 framework/style-options.php:5655
+#: framework/style-options.php:5531 framework/style-options.php:5673
 #: framework/types/class-cp-before-after.php:488
 #: framework/types/class-cp-full-screen.php:419
 #: framework/types/class-cp-full-screen.php:986
@@ -846,13 +855,13 @@ msgid "Status"
 msgstr ""
 
 #: admin/insights.php:215 framework/fields/cp_email/cp-email.php:42
-#: framework/style-options.php:3535 framework/style-options.php:3693
-#: framework/style-options.php:3708 framework/style-options.php:3721
-#: framework/style-options.php:3722 framework/style-options.php:4082
-#: framework/style-options.php:4095 framework/style-options.php:4280
-#: framework/style-options.php:4292 framework/style-options.php:4493
-#: framework/style-options.php:4926 framework/style-options.php:4984
-#: framework/style-options.php:5054
+#: framework/style-options.php:3553 framework/style-options.php:3711
+#: framework/style-options.php:3726 framework/style-options.php:3739
+#: framework/style-options.php:3740 framework/style-options.php:4100
+#: framework/style-options.php:4113 framework/style-options.php:4298
+#: framework/style-options.php:4310 framework/style-options.php:4511
+#: framework/style-options.php:4944 framework/style-options.php:5002
+#: framework/style-options.php:5072
 msgid "Name"
 msgstr ""
 
@@ -942,192 +951,192 @@ msgstr ""
 msgid "Cleared"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440
 msgid "Years"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440
 msgid "Months"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440
 msgid "Weeks"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440
 msgid "Days"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440 framework/style-options.php:1809
 #: framework/style-options.php:1983
 msgid "Hours"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440 framework/style-options.php:1852
 #: framework/style-options.php:2026
 msgid "Minutes"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:401 classes/class-cp-v2-admin.php:441
+#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
 #: classes/class-cp-v2-model.php:440 framework/style-options.php:2105
 msgid "Seconds"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442 framework/style-options.php:1694
 msgid "Year"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442 framework/style-options.php:1728
 msgid "Month"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442
 msgid "Week"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442 framework/style-options.php:1759
 #: framework/style-options.php:1932
 msgid "Day"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442
 msgid "Hour"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442
 msgid "Minute"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:402 classes/class-cp-v2-admin.php:442
+#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
 #: classes/class-cp-v2-model.php:442
 msgid "Second"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:522
+#: classes/class-cp-v2-admin.php:534
 msgid "Specific Pages, Posts, Categories or Taxonomies."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:523
+#: classes/class-cp-v2-admin.php:535
 msgid "Specific Countries."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:524
+#: classes/class-cp-v2-admin.php:536
 msgid "Select post types"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:525
+#: classes/class-cp-v2-admin.php:537
 msgid "This is a hidden field.This text will not appear at frontend."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:526
+#: classes/class-cp-v2-admin.php:538
 msgid "This is a recaptcha field.This will appear at frontend."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:527
+#: classes/class-cp-v2-admin.php:539
 msgid "Click Here"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:528
+#: classes/class-cp-v2-admin.php:540
 msgid "Search Settings..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:529
+#: classes/class-cp-v2-admin.php:541
 msgid "Search Mailer..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:530 framework/style-customizer.php:421
+#: classes/class-cp-v2-admin.php:542 framework/style-customizer.php:421
 msgid "Search Shapes..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:531
+#: classes/class-cp-v2-admin.php:543
 msgid "Refreshed"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:532
+#: classes/class-cp-v2-admin.php:544
 msgid "Use This"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:533
+#: classes/class-cp-v2-admin.php:545
 msgid "Try Again"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:535
+#: classes/class-cp-v2-admin.php:547
 #. translators: %s link
 msgid "Are you sure you want to delete this call-to-action?"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:536
+#: classes/class-cp-v2-admin.php:548
 msgid "Please select different campaign to process."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:537
+#: classes/class-cp-v2-admin.php:549
 msgid "Campaign name cannot be empty."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:538
+#: classes/class-cp-v2-admin.php:550
 msgid "This name is already registered! Please try again using a different name."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:539
+#: classes/class-cp-v2-admin.php:551
 msgid "Design name cannot be empty."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:540
+#: classes/class-cp-v2-admin.php:552
 msgid "Deleting..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:541
+#: classes/class-cp-v2-admin.php:553
 msgid "Saving..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:543
+#: classes/class-cp-v2-admin.php:555
 msgid "Duplicating..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:544
+#: classes/class-cp-v2-admin.php:556
 msgid "Creating..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:545
+#: classes/class-cp-v2-admin.php:557
 msgid "SAVED"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:546
+#: classes/class-cp-v2-admin.php:558
 msgid "SAVE CHANGES"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:547 classes/class-cp-v2-model.php:439
+#: classes/class-cp-v2-admin.php:559 classes/class-cp-v2-model.php:439
 msgid ""
 "This form is not connected with any mailer service! Please contact web "
 "administrator."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:548
+#: classes/class-cp-v2-admin.php:560
 msgid "Do you really want to delete Step"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:549
+#: classes/class-cp-v2-admin.php:561
 msgid "Are you sure you want to delete this ruleset?"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:702
+#: classes/class-cp-v2-admin.php:714
 msgid "Refresh Cloud Templates"
 msgstr ""
 
 #: classes/class-cp-v2-cloud-templates.php:100
-#: includes/common-helper-functions.php:2951
+#: includes/common-helper-functions.php:2978
 msgid "Select Your Goal"
 msgstr ""
 
@@ -1135,7 +1144,7 @@ msgstr ""
 #: classes/class-cp-v2-cloud-templates.php:680
 #: classes/class-cp-v2-cloud-templates.php:768 includes/ajax-actions.php:33
 #: includes/ajax-actions.php:113 includes/ajax-actions.php:222
-#: includes/ajax-actions.php:350 includes/class-bsf-menu.php:318
+#: includes/ajax-actions.php:349 includes/class-bsf-menu.php:378
 #: includes/insights-actions.php:127 includes/insights-actions.php:256
 #: includes/insights-actions.php:353 includes/insights-actions.php:392
 msgid "You are not authorized to perform this action."
@@ -1156,14 +1165,14 @@ msgid ""
 "validate."
 msgstr ""
 
-#: classes/class-cp-v2-loader.php:135
+#: classes/class-cp-v2-loader.php:214
 msgid ""
 "Your server seems to be running outdated, unsupported and vulnerable "
 "version of PHP. You are advised to contact your host provider and upgrade "
 "to PHP version 5.6 or greater."
 msgstr ""
 
-#: classes/class-cp-v2-loader.php:264
+#: classes/class-cp-v2-loader.php:352
 #. translators: %s URL
 msgid ""
 "You currently have two versions of <strong>Convert Pro</strong> active on "
@@ -1224,8 +1233,8 @@ msgstr ""
 msgid "No connections found"
 msgstr ""
 
-#: classes/class-cp-v2-post-type.php:125 includes/class-bsf-menu.php:119
-#: includes/class-bsf-menu.php:120
+#: classes/class-cp-v2-post-type.php:125 includes/class-bsf-menu.php:157
+#: includes/class-bsf-menu.php:158
 msgid "API Connections"
 msgstr ""
 
@@ -1253,7 +1262,7 @@ msgid "Text"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:665
-#: framework/style-options.php:5254 framework/style-options.php:5370
+#: framework/style-options.php:5272 framework/style-options.php:5388
 msgid "Button Text"
 msgstr ""
 
@@ -1274,9 +1283,9 @@ msgid "Font Family"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:689
-#: framework/style-options.php:1473 framework/style-options.php:3056
-#: framework/style-options.php:3225 framework/style-options.php:3392
-#: framework/style-options.php:5393
+#: framework/style-options.php:1473 framework/style-options.php:3074
+#: framework/style-options.php:3243 framework/style-options.php:3410
+#: framework/style-options.php:5411
 #: framework/types/class-cp-before-after.php:948
 #: framework/types/class-cp-full-screen.php:1030
 #: framework/types/class-cp-full-screen.php:1283
@@ -1293,18 +1302,18 @@ msgid "Font Size"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:702
-#: framework/style-options.php:1486 framework/style-options.php:3069
-#: framework/style-options.php:3238 framework/style-options.php:3406
-#: framework/style-options.php:4766
+#: framework/style-options.php:1486 framework/style-options.php:3087
+#: framework/style-options.php:3256 framework/style-options.php:3424
+#: framework/style-options.php:4784
 #: framework/types/class-cp-full-screen.php:1043
 #: framework/types/class-cp-welcome-mat.php:1063
 msgid "Line Height"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:717
-#: framework/style-options.php:1502 framework/style-options.php:3084
-#: framework/style-options.php:3253 framework/style-options.php:3421
-#: framework/style-options.php:5406
+#: framework/style-options.php:1502 framework/style-options.php:3102
+#: framework/style-options.php:3271 framework/style-options.php:3439
+#: framework/style-options.php:5424
 #: framework/types/class-cp-before-after.php:974
 #: framework/types/class-cp-full-screen.php:1059
 #: framework/types/class-cp-full-screen.php:1309
@@ -1319,9 +1328,9 @@ msgid "Letter Spacing"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:732
-#: framework/style-options.php:1518 framework/style-options.php:3099
-#: framework/style-options.php:3268 framework/style-options.php:3436
-#: framework/style-options.php:5419
+#: framework/style-options.php:1518 framework/style-options.php:2274
+#: framework/style-options.php:3117 framework/style-options.php:3286
+#: framework/style-options.php:3454 framework/style-options.php:5437
 #: framework/types/class-cp-before-after.php:995
 #: framework/types/class-cp-full-screen.php:1075
 #: framework/types/class-cp-full-screen.php:1330
@@ -1336,9 +1345,9 @@ msgid "Text Alignment"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:750
-#: framework/style-options.php:1536 framework/style-options.php:2698
-#: framework/style-options.php:3117 framework/style-options.php:3286
-#: framework/style-options.php:3454
+#: framework/style-options.php:1536 framework/style-options.php:2716
+#: framework/style-options.php:3135 framework/style-options.php:3304
+#: framework/style-options.php:3472
 #: framework/types/class-cp-before-after.php:359
 #: framework/types/class-cp-before-after.php:1025
 #: framework/types/class-cp-full-screen.php:290
@@ -1370,8 +1379,8 @@ msgid "Colors"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:779
-#: framework/style-options.php:1547 framework/style-options.php:2294
-#: framework/style-options.php:5293
+#: framework/style-options.php:1547 framework/style-options.php:2312
+#: framework/style-options.php:5311
 #: framework/types/class-cp-before-after.php:581
 #: framework/types/class-cp-before-after.php:1080
 #: framework/types/class-cp-full-screen.php:512
@@ -1396,7 +1405,7 @@ msgid "Background Color"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:789
-#: framework/style-options.php:5303
+#: framework/style-options.php:5321
 msgid "Background Hover Color"
 msgstr ""
 
@@ -1413,70 +1422,70 @@ msgstr ""
 #: framework/classes/class-cp-framework.php:1184
 #: framework/style-options.php:1395 framework/style-options.php:1399
 #: framework/style-options.php:1601 framework/style-options.php:2190
-#: framework/style-options.php:2207 framework/style-options.php:2318
-#: framework/style-options.php:2745 framework/style-options.php:2782
-#: framework/style-options.php:2878 framework/style-options.php:5322
-#: framework/style-options.php:5743
+#: framework/style-options.php:2207 framework/style-options.php:2336
+#: framework/style-options.php:2763 framework/style-options.php:2800
+#: framework/style-options.php:2896 framework/style-options.php:5340
+#: framework/style-options.php:5761
 #: framework/types/class-cp-full-screen.php:1180
 #: framework/types/class-cp-welcome-mat.php:1200
 msgid "None"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:813
-#: framework/style-options.php:1602 framework/style-options.php:2746
-#: framework/style-options.php:5323 framework/style-options.php:5744
+#: framework/style-options.php:1602 framework/style-options.php:2764
+#: framework/style-options.php:5341 framework/style-options.php:5762
 #: framework/types/class-cp-full-screen.php:1181
 #: framework/types/class-cp-welcome-mat.php:1201
 msgid "Submit"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:814
-#: framework/style-options.php:1603 framework/style-options.php:2747
-#: framework/style-options.php:5324 framework/style-options.php:5745
+#: framework/style-options.php:1603 framework/style-options.php:2765
+#: framework/style-options.php:5342 framework/style-options.php:5763
 #: framework/types/class-cp-full-screen.php:1182
 #: framework/types/class-cp-welcome-mat.php:1202
 msgid "Submit & Go to Step"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:815
-#: framework/style-options.php:2748 framework/style-options.php:5325
-#: framework/style-options.php:5746
+#: framework/style-options.php:2766 framework/style-options.php:5343
+#: framework/style-options.php:5764
 msgid "Submit & Go to URL"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:816
-#: framework/style-options.php:1604 framework/style-options.php:2749
-#: framework/style-options.php:5326 framework/style-options.php:5747
+#: framework/style-options.php:1604 framework/style-options.php:2767
+#: framework/style-options.php:5344 framework/style-options.php:5765
 #: framework/types/class-cp-full-screen.php:1183
 #: framework/types/class-cp-welcome-mat.php:1203
 msgid "Submit & Close"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:817
-#: framework/style-options.php:1605 framework/style-options.php:2750
-#: framework/style-options.php:2879 framework/style-options.php:5327
+#: framework/style-options.php:1605 framework/style-options.php:2768
+#: framework/style-options.php:2897 framework/style-options.php:5345
 #: framework/types/class-cp-full-screen.php:1184
 #: framework/types/class-cp-welcome-mat.php:1204
 msgid "Go to URL"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:818
-#: framework/style-options.php:1606 framework/style-options.php:2751
-#: framework/style-options.php:2880 framework/style-options.php:5328
+#: framework/style-options.php:1606 framework/style-options.php:2769
+#: framework/style-options.php:2898 framework/style-options.php:5346
 #: framework/types/class-cp-full-screen.php:1185
 #: framework/types/class-cp-welcome-mat.php:1205
 msgid "Go to Step"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:820
-#: framework/style-options.php:2753 framework/style-options.php:5330
-#: framework/style-options.php:5751
+#: framework/style-options.php:2771 framework/style-options.php:5348
+#: framework/style-options.php:5769
 msgid "Close Page"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:821
-#: framework/style-options.php:2754 framework/style-options.php:5331
-#: framework/style-options.php:5752
+#: framework/style-options.php:2772 framework/style-options.php:5349
+#: framework/style-options.php:5770
 msgid "Close & Go to URL"
 msgstr ""
 
@@ -1533,16 +1542,16 @@ msgstr ""
 #: framework/style-options.php:528 framework/style-options.php:617
 #: framework/style-options.php:812 framework/style-options.php:958
 #: framework/style-options.php:1083 framework/style-options.php:1147
-#: framework/style-options.php:1230 framework/style-options.php:2414
-#: framework/style-options.php:2430 framework/style-options.php:2446
-#: framework/style-options.php:2462 framework/style-options.php:2478
-#: framework/style-options.php:3550 framework/style-options.php:3566
-#: framework/style-options.php:3736 framework/style-options.php:3752
-#: framework/style-options.php:3923 framework/style-options.php:3939
-#: framework/style-options.php:4110 framework/style-options.php:4137
-#: framework/style-options.php:4308 framework/style-options.php:4324
-#: framework/style-options.php:4519 framework/style-options.php:4733
-#: framework/style-options.php:5097 framework/style-options.php:5846
+#: framework/style-options.php:1230 framework/style-options.php:2432
+#: framework/style-options.php:2448 framework/style-options.php:2464
+#: framework/style-options.php:2480 framework/style-options.php:2496
+#: framework/style-options.php:3568 framework/style-options.php:3584
+#: framework/style-options.php:3754 framework/style-options.php:3770
+#: framework/style-options.php:3941 framework/style-options.php:3957
+#: framework/style-options.php:4128 framework/style-options.php:4155
+#: framework/style-options.php:4326 framework/style-options.php:4342
+#: framework/style-options.php:4537 framework/style-options.php:4751
+#: framework/style-options.php:5115 framework/style-options.php:5864
 #: framework/types/class-cp-info-bar.php:745
 #: framework/types/class-cp-info-bar.php:785
 #: framework/types/class-cp-modal-popup.php:842
@@ -1558,16 +1567,16 @@ msgstr ""
 #: framework/style-options.php:529 framework/style-options.php:618
 #: framework/style-options.php:813 framework/style-options.php:959
 #: framework/style-options.php:1084 framework/style-options.php:1148
-#: framework/style-options.php:1231 framework/style-options.php:2415
-#: framework/style-options.php:2431 framework/style-options.php:2447
-#: framework/style-options.php:2463 framework/style-options.php:2479
-#: framework/style-options.php:3551 framework/style-options.php:3567
-#: framework/style-options.php:3737 framework/style-options.php:3753
-#: framework/style-options.php:3924 framework/style-options.php:3940
-#: framework/style-options.php:4111 framework/style-options.php:4138
-#: framework/style-options.php:4309 framework/style-options.php:4325
-#: framework/style-options.php:4520 framework/style-options.php:4734
-#: framework/style-options.php:5098 framework/style-options.php:5847
+#: framework/style-options.php:1231 framework/style-options.php:2433
+#: framework/style-options.php:2449 framework/style-options.php:2465
+#: framework/style-options.php:2481 framework/style-options.php:2497
+#: framework/style-options.php:3569 framework/style-options.php:3585
+#: framework/style-options.php:3755 framework/style-options.php:3771
+#: framework/style-options.php:3942 framework/style-options.php:3958
+#: framework/style-options.php:4129 framework/style-options.php:4156
+#: framework/style-options.php:4327 framework/style-options.php:4343
+#: framework/style-options.php:4538 framework/style-options.php:4752
+#: framework/style-options.php:5116 framework/style-options.php:5865
 #: framework/types/class-cp-info-bar.php:746
 #: framework/types/class-cp-info-bar.php:786
 #: framework/types/class-cp-modal-popup.php:843
@@ -1578,10 +1587,10 @@ msgstr ""
 
 #: framework/classes/class-cp-framework.php:1022
 #: framework/classes/class-cp-framework.php:1028
-#: framework/style-options.php:3583 framework/style-options.php:3769
-#: framework/style-options.php:3956 framework/style-options.php:4154
-#: framework/style-options.php:4341 framework/style-options.php:4552
-#: framework/style-options.php:4783 framework/style-options.php:5114
+#: framework/style-options.php:3601 framework/style-options.php:3787
+#: framework/style-options.php:3974 framework/style-options.php:4172
+#: framework/style-options.php:4359 framework/style-options.php:4570
+#: framework/style-options.php:4801 framework/style-options.php:5132
 msgid "Animation"
 msgstr ""
 
@@ -1594,7 +1603,7 @@ msgid "Animation Duration"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1082
-#: framework/style-options.php:2305
+#: framework/style-options.php:2323
 #: framework/types/class-cp-before-after.php:1101
 #: framework/types/class-cp-full-screen.php:1436
 #: framework/types/class-cp-info-bar.php:1217
@@ -1607,7 +1616,7 @@ msgid "Border"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1089
-#: framework/style-options.php:2312
+#: framework/style-options.php:2330
 #: framework/types/class-cp-before-after.php:700
 #: framework/types/class-cp-before-after.php:1115
 #: framework/types/class-cp-full-screen.php:631
@@ -1628,22 +1637,22 @@ msgid "Border Style"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1092
-#: framework/style-options.php:1392 framework/style-options.php:2315
+#: framework/style-options.php:1392 framework/style-options.php:2333
 msgid "Solid"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1093
-#: framework/style-options.php:1393 framework/style-options.php:2316
+#: framework/style-options.php:1393 framework/style-options.php:2334
 msgid "Dotted"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1094
-#: framework/style-options.php:1394 framework/style-options.php:2317
+#: framework/style-options.php:1394 framework/style-options.php:2335
 msgid "Dashed"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1107
-#: framework/style-options.php:2331
+#: framework/style-options.php:2349
 #: framework/types/class-cp-before-after.php:718
 #: framework/types/class-cp-before-after.php:1188
 #: framework/types/class-cp-full-screen.php:649
@@ -1668,7 +1677,7 @@ msgid "Border Hover Color"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1143
-#: framework/style-options.php:2348
+#: framework/style-options.php:2366
 #: framework/types/class-cp-before-after.php:741
 #: framework/types/class-cp-before-after.php:1135
 #: framework/types/class-cp-full-screen.php:672
@@ -1689,7 +1698,7 @@ msgid "Border Width"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1161
-#: framework/style-options.php:2367
+#: framework/style-options.php:2385
 #: framework/types/class-cp-before-after.php:1164
 #: framework/types/class-cp-full-screen.php:1499
 #: framework/types/class-cp-info-bar.php:1280
@@ -1719,7 +1728,7 @@ msgid "Inset"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1186
-#: framework/style-options.php:2783
+#: framework/style-options.php:2801
 msgid "Outset"
 msgstr ""
 
@@ -1775,8 +1784,8 @@ msgid ""
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1284
-#: framework/style-options.php:3132 framework/style-options.php:3300
-#: framework/style-options.php:3468
+#: framework/style-options.php:3150 framework/style-options.php:3318
+#: framework/style-options.php:3486
 msgid "Layout"
 msgstr ""
 
@@ -1785,7 +1794,7 @@ msgid "Rotation Angle"
 msgstr ""
 
 #: framework/classes/class-cp-framework.php:1337
-#: framework/style-options.php:2380 framework/style-options.php:4438
+#: framework/style-options.php:2398 framework/style-options.php:4456
 #: framework/types/class-cp-before-after.php:1272
 #: framework/types/class-cp-before-after.php:1287
 #: framework/types/class-cp-full-screen.php:1607
@@ -1809,8 +1818,8 @@ msgstr ""
 msgid "Custom Class"
 msgstr ""
 
-#: framework/connect-popup.php:36 framework/style-customizer.php:801
-#: framework/style-customizer.php:872
+#: framework/connect-popup.php:36 framework/style-customizer.php:806
+#: framework/style-customizer.php:877
 msgid "Loading..."
 msgstr ""
 
@@ -1973,7 +1982,7 @@ msgstr ""
 
 #: framework/fields/cp_button/cp-button.php:43
 #: framework/fields/cp_gradient_button/cp-gradient-button.php:43
-#: framework/fields/cp_hidden/cp-hidden.php:35 framework/style-options.php:5237
+#: framework/fields/cp_hidden/cp-hidden.php:35 framework/style-options.php:5255
 msgid "Button"
 msgstr ""
 
@@ -2006,12 +2015,12 @@ msgid "UPLOAD"
 msgstr ""
 
 #: framework/fields/cp_checkbox/cp-checkbox.php:39
-#: framework/style-options.php:4679 framework/style-options.php:4694
+#: framework/style-options.php:4697 framework/style-options.php:4712
 msgid "Check Box"
 msgstr ""
 
 #: framework/fields/cp_close_image/cp-close-image.php:39
-#: framework/style-options.php:2567
+#: framework/style-options.php:2585
 #: framework/types/class-cp-full-screen.php:835
 #: framework/types/class-cp-welcome-mat.php:855
 msgid "Close Image"
@@ -2037,7 +2046,7 @@ msgstr ""
 msgid "HTML"
 msgstr ""
 
-#: framework/fields/cp_date/cp-date.php:40 framework/style-options.php:5039
+#: framework/fields/cp_date/cp-date.php:40 framework/style-options.php:5057
 msgid "Date"
 msgstr ""
 
@@ -2054,18 +2063,18 @@ msgstr ""
 msgid "No Shapes Found"
 msgstr ""
 
-#: framework/fields/cp_email/cp-email.php:40 framework/style-options.php:3519
-#: framework/style-options.php:3536
+#: framework/fields/cp_email/cp-email.php:40 framework/style-options.php:3537
+#: framework/style-options.php:3554
 msgid "Email"
 msgstr ""
 
 #: framework/fields/cp_google_recaptcha/cp-google-recaptcha.php:39
-#: framework/style-options.php:4969
+#: framework/style-options.php:4987
 msgid "Recaptcha Info"
 msgstr ""
 
 #: framework/fields/cp_heading/cp-heading.php:42
-#: framework/style-options.php:3351
+#: framework/style-options.php:3369
 msgid "Heading"
 msgstr ""
 
@@ -2074,12 +2083,12 @@ msgid "Hidden"
 msgstr ""
 
 #: framework/fields/cp_hidden_input/cp-hidden-input.php:39
-#: framework/style-options.php:4910
+#: framework/style-options.php:4928
 msgid "Hidden Input"
 msgstr ""
 
 #: framework/fields/cp_image/cp-image.php:39 framework/style-options.php:1433
-#: framework/style-options.php:2538 framework/style-options.php:2837
+#: framework/style-options.php:2556 framework/style-options.php:2855
 #: framework/types/class-cp-before-after.php:361
 #: framework/types/class-cp-full-screen.php:292
 #: framework/types/class-cp-full-screen.php:806
@@ -2096,7 +2105,7 @@ msgid "Image"
 msgstr ""
 
 #: framework/fields/cp_paragraph/cp-paragraph.php:42
-#: framework/style-options.php:3014
+#: framework/style-options.php:3032
 msgid "Paragraph"
 msgstr ""
 
@@ -2105,7 +2114,7 @@ msgid "Radio Button"
 msgstr ""
 
 #: framework/fields/cp_sub_heading/cp-sub-heading.php:42
-#: framework/style-options.php:3183
+#: framework/style-options.php:3201
 msgid "Subheading"
 msgstr ""
 
@@ -2121,7 +2130,7 @@ msgstr ""
 msgid "Enter Message Here"
 msgstr ""
 
-#: framework/fields/cp_video/cp-video.php:37 framework/style-options.php:5772
+#: framework/fields/cp_video/cp-video.php:37 framework/style-options.php:5790
 msgid "Video"
 msgstr ""
 
@@ -2370,7 +2379,7 @@ msgstr ""
 
 #: framework/style-customizer.php:506
 msgid ""
-"Triggers within a Ruleset work as AND, \r\n"
+"Triggers within a Ruleset work as AND, \n"
 "Triggers from different Ruleset works as OR"
 msgstr ""
 
@@ -2406,47 +2415,47 @@ msgstr ""
 msgid "Show On Mobile"
 msgstr ""
 
-#: framework/style-customizer.php:819
+#: framework/style-customizer.php:824
 msgid "Enable Mobile Editor"
 msgstr ""
 
-#: framework/style-customizer.php:822
+#: framework/style-customizer.php:827
 msgid ""
 "You are about to enable the mobile editor. This allows you to create a "
 "different design for smaller screens by adjusting the position of elemennts "
 "or hiding some of them."
 msgstr ""
 
-#: framework/style-customizer.php:827
+#: framework/style-customizer.php:832
 #. translators: %s Convert Pro Name.
 msgid ""
 "If you would rather like %s to manage this automatically, please click "
 "CANCEL."
 msgstr ""
 
-#: framework/style-customizer.php:836 framework/style-customizer.php:862
+#: framework/style-customizer.php:841 framework/style-customizer.php:867
 msgid "CANCEL"
 msgstr ""
 
-#: framework/style-customizer.php:838
+#: framework/style-customizer.php:843
 msgid "CREATE DIFFERENT CALL-TO-ACTION FOR SMALLER SCREENS"
 msgstr ""
 
-#: framework/style-customizer.php:850
+#: framework/style-customizer.php:855
 msgid "Reset Mobile View"
 msgstr ""
 
-#: framework/style-customizer.php:853
+#: framework/style-customizer.php:858
 msgid ""
 "This action will regenerate the mobile view of your current step based on "
 "desktop design."
 msgstr ""
 
-#: framework/style-customizer.php:854
+#: framework/style-customizer.php:859
 msgid "Any mobile specific changes you have made will be lost."
 msgstr ""
 
-#: framework/style-customizer.php:864
+#: framework/style-customizer.php:869
 msgid "I understand, Continue!"
 msgstr ""
 
@@ -2617,7 +2626,7 @@ msgstr ""
 msgid "Select the time period between which you wish to display this design."
 msgstr ""
 
-#: framework/style-options.php:561 framework/style-options.php:5879
+#: framework/style-options.php:561 framework/style-options.php:5897
 msgid "Start Time"
 msgstr ""
 
@@ -2696,11 +2705,11 @@ msgstr ""
 msgid "Logged-in Users"
 msgstr ""
 
-#: framework/style-options.php:882 framework/style-options.php:5863
+#: framework/style-options.php:882 framework/style-options.php:5881
 msgid "SHOW"
 msgstr ""
 
-#: framework/style-options.php:883 framework/style-options.php:5864
+#: framework/style-options.php:883 framework/style-options.php:5882
 msgid "HIDE"
 msgstr ""
 
@@ -2899,7 +2908,7 @@ msgstr ""
 msgid "Tada"
 msgstr ""
 
-#: framework/style-options.php:1360 framework/style-options.php:5071
+#: framework/style-options.php:1360 framework/style-options.php:5089
 msgid "MM/DD/YYYY"
 msgstr ""
 
@@ -2937,9 +2946,9 @@ msgstr ""
 msgid "Enter Text"
 msgstr ""
 
-#: framework/style-options.php:1521 framework/style-options.php:3101
-#: framework/style-options.php:3270 framework/style-options.php:3438
-#: framework/style-options.php:5421
+#: framework/style-options.php:1521 framework/style-options.php:2277
+#: framework/style-options.php:3119 framework/style-options.php:3288
+#: framework/style-options.php:3456 framework/style-options.php:5439
 #: framework/types/class-cp-before-after.php:999
 #: framework/types/class-cp-full-screen.php:1078
 #: framework/types/class-cp-full-screen.php:1334
@@ -2953,9 +2962,9 @@ msgstr ""
 msgid "center"
 msgstr ""
 
-#: framework/style-options.php:1522 framework/style-options.php:3102
-#: framework/style-options.php:3271 framework/style-options.php:3439
-#: framework/style-options.php:5422
+#: framework/style-options.php:1522 framework/style-options.php:2278
+#: framework/style-options.php:3120 framework/style-options.php:3289
+#: framework/style-options.php:3457 framework/style-options.php:5440
 #: framework/types/class-cp-before-after.php:1000
 #: framework/types/class-cp-full-screen.php:1079
 #: framework/types/class-cp-full-screen.php:1335
@@ -2969,9 +2978,9 @@ msgstr ""
 msgid "left"
 msgstr ""
 
-#: framework/style-options.php:1523 framework/style-options.php:3103
-#: framework/style-options.php:3272 framework/style-options.php:3440
-#: framework/style-options.php:5423
+#: framework/style-options.php:1523 framework/style-options.php:2279
+#: framework/style-options.php:3121 framework/style-options.php:3290
+#: framework/style-options.php:3458 framework/style-options.php:5441
 #: framework/types/class-cp-before-after.php:1001
 #: framework/types/class-cp-full-screen.php:1080
 #: framework/types/class-cp-full-screen.php:1336
@@ -2985,9 +2994,9 @@ msgstr ""
 msgid "right"
 msgstr ""
 
-#: framework/style-options.php:1524 framework/style-options.php:3104
-#: framework/style-options.php:3273 framework/style-options.php:3441
-#: framework/style-options.php:5424
+#: framework/style-options.php:1524 framework/style-options.php:2280
+#: framework/style-options.php:3122 framework/style-options.php:3291
+#: framework/style-options.php:3459 framework/style-options.php:5442
 #: framework/types/class-cp-before-after.php:1002
 #: framework/types/class-cp-full-screen.php:1081
 #: framework/types/class-cp-full-screen.php:1337
@@ -3001,14 +3010,14 @@ msgstr ""
 msgid "justify"
 msgstr ""
 
-#: framework/style-options.php:1562 framework/style-options.php:2494
-#: framework/style-options.php:2617 framework/style-options.php:2793
-#: framework/style-options.php:3139 framework/style-options.php:3307
-#: framework/style-options.php:3475 framework/style-options.php:3647
-#: framework/style-options.php:3834 framework/style-options.php:4021
-#: framework/style-options.php:4219 framework/style-options.php:4405
-#: framework/style-options.php:4617 framework/style-options.php:4848
-#: framework/style-options.php:5179 framework/style-options.php:5899
+#: framework/style-options.php:1562 framework/style-options.php:2512
+#: framework/style-options.php:2635 framework/style-options.php:2811
+#: framework/style-options.php:3157 framework/style-options.php:3325
+#: framework/style-options.php:3493 framework/style-options.php:3665
+#: framework/style-options.php:3852 framework/style-options.php:4039
+#: framework/style-options.php:4237 framework/style-options.php:4423
+#: framework/style-options.php:4635 framework/style-options.php:4866
+#: framework/style-options.php:5197 framework/style-options.php:5917
 #: framework/types/class-cp-before-after.php:281
 #: framework/types/class-cp-full-screen.php:210
 #: framework/types/class-cp-full-screen.php:885
@@ -3026,14 +3035,14 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-#: framework/style-options.php:1579 framework/style-options.php:2511
-#: framework/style-options.php:2634 framework/style-options.php:2810
-#: framework/style-options.php:3156 framework/style-options.php:3324
-#: framework/style-options.php:3492 framework/style-options.php:3664
-#: framework/style-options.php:3851 framework/style-options.php:4038
-#: framework/style-options.php:4236 framework/style-options.php:4422
-#: framework/style-options.php:4634 framework/style-options.php:4865
-#: framework/style-options.php:5196 framework/style-options.php:5916
+#: framework/style-options.php:1579 framework/style-options.php:2529
+#: framework/style-options.php:2652 framework/style-options.php:2828
+#: framework/style-options.php:3174 framework/style-options.php:3342
+#: framework/style-options.php:3510 framework/style-options.php:3682
+#: framework/style-options.php:3869 framework/style-options.php:4056
+#: framework/style-options.php:4254 framework/style-options.php:4440
+#: framework/style-options.php:4652 framework/style-options.php:4883
+#: framework/style-options.php:5214 framework/style-options.php:5934
 #: framework/types/class-cp-before-after.php:307
 #: framework/types/class-cp-full-screen.php:237
 #: framework/types/class-cp-full-screen.php:902
@@ -3107,8 +3116,8 @@ msgstr ""
 msgid "Number Color"
 msgstr ""
 
-#: framework/style-options.php:2264 framework/style-options.php:5271
-#: framework/style-options.php:5442
+#: framework/style-options.php:2264 framework/style-options.php:5289
+#: framework/style-options.php:5460
 #: framework/types/class-cp-before-after.php:1039
 #: framework/types/class-cp-full-screen.php:1374
 #: framework/types/class-cp-info-bar.php:830
@@ -3122,227 +3131,227 @@ msgstr ""
 msgid "Text Color"
 msgstr ""
 
-#: framework/style-options.php:2273
+#: framework/style-options.php:2291
 msgid "Design"
 msgstr ""
 
-#: framework/style-options.php:2279
+#: framework/style-options.php:2297
 msgid "Text Inside/Outside of Box"
 msgstr ""
 
-#: framework/style-options.php:2283
+#: framework/style-options.php:2301
 msgid "Outside"
 msgstr ""
 
-#: framework/style-options.php:2284
+#: framework/style-options.php:2302
 msgid "Inside"
 msgstr ""
 
-#: framework/style-options.php:2392
+#: framework/style-options.php:2410
 msgid "Space between Text and Number"
 msgstr ""
 
-#: framework/style-options.php:2410
+#: framework/style-options.php:2428
 msgid "Show Months"
 msgstr ""
 
-#: framework/style-options.php:2426
+#: framework/style-options.php:2444
 msgid "Show Days"
 msgstr ""
 
-#: framework/style-options.php:2442
+#: framework/style-options.php:2460
 msgid "Show Hours"
 msgstr ""
 
-#: framework/style-options.php:2458
+#: framework/style-options.php:2476
 msgid "Show Minutes"
 msgstr ""
 
-#: framework/style-options.php:2474
+#: framework/style-options.php:2492
 msgid "Show Seconds"
 msgstr ""
 
-#: framework/style-options.php:2553
+#: framework/style-options.php:2571
 #: framework/types/class-cp-full-screen.php:821
 #: framework/types/class-cp-welcome-mat.php:841
 msgid "Image Source"
 msgstr ""
 
-#: framework/style-options.php:2556
+#: framework/style-options.php:2574
 #: framework/types/class-cp-full-screen.php:824
 #: framework/types/class-cp-welcome-mat.php:844
 msgid "Upload Image"
 msgstr ""
 
-#: framework/style-options.php:2557
+#: framework/style-options.php:2575
 #: framework/types/class-cp-full-screen.php:825
 #: framework/types/class-cp-welcome-mat.php:845
 msgid "Predefined Icons"
 msgstr ""
 
-#: framework/style-options.php:2584 framework/style-options.php:2852
+#: framework/style-options.php:2602 framework/style-options.php:2870
 #: framework/types/class-cp-full-screen.php:852
 #: framework/types/class-cp-welcome-mat.php:872
 msgid "Module Image"
 msgstr ""
 
-#: framework/style-options.php:2682
+#: framework/style-options.php:2700
 msgid "Shape"
 msgstr ""
 
-#: framework/style-options.php:2709
+#: framework/style-options.php:2727
 msgid "Hover Color"
 msgstr ""
 
-#: framework/style-options.php:2720
+#: framework/style-options.php:2738
 msgid "Border Thickness"
 msgstr ""
 
-#: framework/style-options.php:2770
+#: framework/style-options.php:2788
 msgid "Shadow"
 msgstr ""
 
-#: framework/style-options.php:2940
+#: framework/style-options.php:2958
 msgid "Custom HTML"
 msgstr ""
 
-#: framework/style-options.php:2941 framework/style-options.php:2957
+#: framework/style-options.php:2959 framework/style-options.php:2975
 msgid "This is custom <b>HTML</b>. Edit this text from left side panel."
 msgstr ""
 
-#: framework/style-options.php:2956
+#: framework/style-options.php:2974
 msgid "Enter HTML"
 msgstr ""
 
-#: framework/style-options.php:3031 framework/style-options.php:3200
-#: framework/style-options.php:3367
+#: framework/style-options.php:3049 framework/style-options.php:3218
+#: framework/style-options.php:3385
 msgid "Title"
 msgstr ""
 
-#: framework/style-options.php:3032 framework/style-options.php:3201
-#: framework/style-options.php:3368
+#: framework/style-options.php:3050 framework/style-options.php:3219
+#: framework/style-options.php:3386
 msgid "Enter Heading"
 msgstr ""
 
-#: framework/style-options.php:3546 framework/style-options.php:3732
-#: framework/style-options.php:3919 framework/style-options.php:4106
-#: framework/style-options.php:4304
+#: framework/style-options.php:3564 framework/style-options.php:3750
+#: framework/style-options.php:3937 framework/style-options.php:4124
+#: framework/style-options.php:4322
 msgid "Name as a Placeholder"
 msgstr ""
 
-#: framework/style-options.php:3562 framework/style-options.php:3748
-#: framework/style-options.php:3935 framework/style-options.php:4133
-#: framework/style-options.php:4320 framework/style-options.php:4515
-#: framework/style-options.php:4729 framework/style-options.php:5093
+#: framework/style-options.php:3580 framework/style-options.php:3766
+#: framework/style-options.php:3953 framework/style-options.php:4151
+#: framework/style-options.php:4338 framework/style-options.php:4533
+#: framework/style-options.php:4747 framework/style-options.php:5111
 msgid "Required"
 msgstr ""
 
-#: framework/style-options.php:3642 framework/style-options.php:3828
-#: framework/style-options.php:4015 framework/style-options.php:4213
-#: framework/style-options.php:4400 framework/style-options.php:4611
-#: framework/style-options.php:4842 framework/style-options.php:5173
+#: framework/style-options.php:3660 framework/style-options.php:3846
+#: framework/style-options.php:4033 framework/style-options.php:4231
+#: framework/style-options.php:4418 framework/style-options.php:4629
+#: framework/style-options.php:4860 framework/style-options.php:5191
 msgid "Size"
 msgstr ""
 
-#: framework/style-options.php:3880 framework/style-options.php:3909
+#: framework/style-options.php:3898 framework/style-options.php:3927
 msgid "Phone"
 msgstr ""
 
-#: framework/style-options.php:3895 framework/style-options.php:3908
+#: framework/style-options.php:3913 framework/style-options.php:3926
 msgid "Number"
 msgstr ""
 
-#: framework/style-options.php:4067
+#: framework/style-options.php:4085
 msgid "Dropdown"
 msgstr ""
 
-#: framework/style-options.php:4122 framework/style-options.php:4504
-#: framework/style-options.php:4718
+#: framework/style-options.php:4140 framework/style-options.php:4522
+#: framework/style-options.php:4736
 msgid "Options"
 msgstr ""
 
-#: framework/style-options.php:4265
+#: framework/style-options.php:4283
 msgid "Textarea"
 msgstr ""
 
-#: framework/style-options.php:4293
+#: framework/style-options.php:4311
 msgid "Enter message here"
 msgstr ""
 
-#: framework/style-options.php:4465 framework/style-options.php:4480
+#: framework/style-options.php:4483 framework/style-options.php:4498
 msgid "Radio"
 msgstr ""
 
-#: framework/style-options.php:4494 framework/style-options.php:4708
+#: framework/style-options.php:4512 framework/style-options.php:4726
 msgid "Placeholder text"
 msgstr ""
 
-#: framework/style-options.php:4532
+#: framework/style-options.php:4550
 msgid "Radio Button Orientation"
 msgstr ""
 
-#: framework/style-options.php:4535 framework/style-options.php:4749
+#: framework/style-options.php:4553 framework/style-options.php:4767
 msgid "Vertical"
 msgstr ""
 
-#: framework/style-options.php:4536 framework/style-options.php:4750
+#: framework/style-options.php:4554 framework/style-options.php:4768
 msgid "Horizontal"
 msgstr ""
 
-#: framework/style-options.php:4650
+#: framework/style-options.php:4668
 msgid "Radio Size"
 msgstr ""
 
-#: framework/style-options.php:4707
+#: framework/style-options.php:4725
 msgid "Label"
 msgstr ""
 
-#: framework/style-options.php:4746
+#: framework/style-options.php:4764
 msgid "Checkbox Button Orientation"
 msgstr ""
 
-#: framework/style-options.php:4881
+#: framework/style-options.php:4899
 msgid "Checkbox Size"
 msgstr ""
 
-#: framework/style-options.php:4941
+#: framework/style-options.php:4959
 msgid "Hidden Field Value"
 msgstr ""
 
-#: framework/style-options.php:4999
+#: framework/style-options.php:5017
 msgid "Recaptcha Site key"
 msgstr ""
 
-#: framework/style-options.php:5015
+#: framework/style-options.php:5033
 #. translators:%s module name .
 msgid "%s "
 msgstr ""
 
-#: framework/style-options.php:5070
+#: framework/style-options.php:5088
 msgid "Placeholder"
 msgstr ""
 
-#: framework/style-options.php:5255 framework/style-options.php:5371
+#: framework/style-options.php:5273 framework/style-options.php:5389
 msgid "Subscribe"
 msgstr ""
 
-#: framework/style-options.php:5282 framework/style-options.php:5453
+#: framework/style-options.php:5300 framework/style-options.php:5471
 msgid "Text Hover Color"
 msgstr ""
 
-#: framework/style-options.php:5353
+#: framework/style-options.php:5371
 msgid "Gradient Button"
 msgstr ""
 
-#: framework/style-options.php:5465
+#: framework/style-options.php:5483
 msgid "First Background Color"
 msgstr ""
 
-#: framework/style-options.php:5475
+#: framework/style-options.php:5493
 msgid "Second Background Color"
 msgstr ""
 
-#: framework/style-options.php:5485
+#: framework/style-options.php:5503
 #: framework/types/class-cp-before-after.php:430
 #: framework/types/class-cp-full-screen.php:361
 #: framework/types/class-cp-info-bar.php:331
@@ -3354,7 +3363,7 @@ msgstr ""
 msgid "Gradient Start Location"
 msgstr ""
 
-#: framework/style-options.php:5499
+#: framework/style-options.php:5517
 #: framework/types/class-cp-before-after.php:459
 #: framework/types/class-cp-full-screen.php:390
 #: framework/types/class-cp-info-bar.php:360
@@ -3366,7 +3375,7 @@ msgstr ""
 msgid "Gradient End Location"
 msgstr ""
 
-#: framework/style-options.php:5516 framework/style-options.php:5658
+#: framework/style-options.php:5534 framework/style-options.php:5676
 #: framework/types/class-cp-before-after.php:491
 #: framework/types/class-cp-full-screen.php:422
 #: framework/types/class-cp-info-bar.php:392
@@ -3379,7 +3388,7 @@ msgstr ""
 msgid "Linear"
 msgstr ""
 
-#: framework/style-options.php:5517 framework/style-options.php:5659
+#: framework/style-options.php:5535 framework/style-options.php:5677
 #: framework/types/class-cp-before-after.php:492
 #: framework/types/class-cp-full-screen.php:423
 #: framework/types/class-cp-info-bar.php:393
@@ -3392,7 +3401,7 @@ msgstr ""
 msgid "Radial"
 msgstr ""
 
-#: framework/style-options.php:5527 framework/style-options.php:5553
+#: framework/style-options.php:5545 framework/style-options.php:5571
 #: framework/types/class-cp-before-after.php:516
 #: framework/types/class-cp-before-after.php:552
 #: framework/types/class-cp-full-screen.php:447
@@ -3413,7 +3422,7 @@ msgstr ""
 msgid "Gradient Direction"
 msgstr ""
 
-#: framework/style-options.php:5530 framework/style-options.php:5677
+#: framework/style-options.php:5548 framework/style-options.php:5695
 #: framework/types/class-cp-before-after.php:520
 #: framework/types/class-cp-full-screen.php:451
 #: framework/types/class-cp-info-bar.php:420
@@ -3426,7 +3435,7 @@ msgstr ""
 msgid "Center Center"
 msgstr ""
 
-#: framework/style-options.php:5531 framework/style-options.php:5678
+#: framework/style-options.php:5549 framework/style-options.php:5696
 #: framework/types/class-cp-before-after.php:521
 #: framework/types/class-cp-full-screen.php:452
 #: framework/types/class-cp-info-bar.php:421
@@ -3440,7 +3449,7 @@ msgstr ""
 msgid "Center Left"
 msgstr ""
 
-#: framework/style-options.php:5532 framework/style-options.php:5679
+#: framework/style-options.php:5550 framework/style-options.php:5697
 #: framework/types/class-cp-before-after.php:522
 #: framework/types/class-cp-full-screen.php:453
 #: framework/types/class-cp-info-bar.php:422
@@ -3454,7 +3463,7 @@ msgstr ""
 msgid "Center Right"
 msgstr ""
 
-#: framework/style-options.php:5533 framework/style-options.php:5680
+#: framework/style-options.php:5551 framework/style-options.php:5698
 #: framework/types/class-cp-before-after.php:523
 #: framework/types/class-cp-full-screen.php:454
 #: framework/types/class-cp-info-bar.php:423
@@ -3467,7 +3476,7 @@ msgstr ""
 msgid "Top Center"
 msgstr ""
 
-#: framework/style-options.php:5534 framework/style-options.php:5681
+#: framework/style-options.php:5552 framework/style-options.php:5699
 #: framework/types/class-cp-before-after.php:524
 #: framework/types/class-cp-full-screen.php:455
 #: framework/types/class-cp-info-bar.php:424
@@ -3480,7 +3489,7 @@ msgstr ""
 msgid "Top Left"
 msgstr ""
 
-#: framework/style-options.php:5535 framework/style-options.php:5682
+#: framework/style-options.php:5553 framework/style-options.php:5700
 #: framework/types/class-cp-before-after.php:525
 #: framework/types/class-cp-full-screen.php:456
 #: framework/types/class-cp-info-bar.php:425
@@ -3493,7 +3502,7 @@ msgstr ""
 msgid "Top Right"
 msgstr ""
 
-#: framework/style-options.php:5536 framework/style-options.php:5683
+#: framework/style-options.php:5554 framework/style-options.php:5701
 #: framework/types/class-cp-before-after.php:526
 #: framework/types/class-cp-full-screen.php:457
 #: framework/types/class-cp-info-bar.php:426
@@ -3507,7 +3516,7 @@ msgstr ""
 msgid "Bottom Center"
 msgstr ""
 
-#: framework/style-options.php:5537 framework/style-options.php:5684
+#: framework/style-options.php:5555 framework/style-options.php:5702
 #: framework/types/class-cp-before-after.php:527
 #: framework/types/class-cp-full-screen.php:458
 #: framework/types/class-cp-info-bar.php:427
@@ -3521,7 +3530,7 @@ msgstr ""
 msgid "Bottom Left"
 msgstr ""
 
-#: framework/style-options.php:5538 framework/style-options.php:5685
+#: framework/style-options.php:5556 framework/style-options.php:5703
 #: framework/types/class-cp-before-after.php:528
 #: framework/types/class-cp-full-screen.php:459
 #: framework/types/class-cp-info-bar.php:428
@@ -3535,11 +3544,11 @@ msgstr ""
 msgid "Bottom Right"
 msgstr ""
 
-#: framework/style-options.php:5573
+#: framework/style-options.php:5591
 msgid "On Hover Color"
 msgstr ""
 
-#: framework/style-options.php:5576
+#: framework/style-options.php:5594
 #: framework/types/class-cp-before-after.php:336
 #: framework/types/class-cp-full-screen.php:267
 #: framework/types/class-cp-inline.php:272
@@ -3550,7 +3559,7 @@ msgstr ""
 msgid "Custom"
 msgstr ""
 
-#: framework/style-options.php:5577
+#: framework/style-options.php:5595
 #: framework/types/class-cp-before-after.php:335
 #: framework/types/class-cp-full-screen.php:266
 #: framework/types/class-cp-inline.php:271
@@ -3561,63 +3570,63 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: framework/style-options.php:5587
+#: framework/style-options.php:5605
 msgid "First Hover Background Color"
 msgstr ""
 
-#: framework/style-options.php:5602
+#: framework/style-options.php:5620
 msgid "Second Hover Background Color"
 msgstr ""
 
-#: framework/style-options.php:5617
+#: framework/style-options.php:5635
 msgid "Hover Start Location"
 msgstr ""
 
-#: framework/style-options.php:5636
+#: framework/style-options.php:5654
 msgid "Hover End Location"
 msgstr ""
 
-#: framework/style-options.php:5674 framework/style-options.php:5708
+#: framework/style-options.php:5692 framework/style-options.php:5726
 msgid "Hover Gradient Direction"
 msgstr ""
 
-#: framework/style-options.php:5748
+#: framework/style-options.php:5766
 msgid "Go To URL"
 msgstr ""
 
-#: framework/style-options.php:5749
+#: framework/style-options.php:5767
 msgid "Go To Step"
 msgstr ""
 
-#: framework/style-options.php:5786
+#: framework/style-options.php:5804
 msgid "Source"
 msgstr ""
 
-#: framework/style-options.php:5790
+#: framework/style-options.php:5808
 msgid "YouTube"
 msgstr ""
 
-#: framework/style-options.php:5791
+#: framework/style-options.php:5809
 msgid "Vimeo"
 msgstr ""
 
-#: framework/style-options.php:5792
+#: framework/style-options.php:5810
 msgid "Custom URL"
 msgstr ""
 
-#: framework/style-options.php:5803
+#: framework/style-options.php:5821
 msgid "Video ID"
 msgstr ""
 
-#: framework/style-options.php:5827
+#: framework/style-options.php:5845
 msgid "Video URL"
 msgstr ""
 
-#: framework/style-options.php:5849
+#: framework/style-options.php:5867
 msgid "Autoplay"
 msgstr ""
 
-#: framework/style-options.php:5871
+#: framework/style-options.php:5889
 msgid "Player Controls"
 msgstr ""
 
@@ -4058,45 +4067,45 @@ msgstr ""
 msgid "You already have a campaign with the same name."
 msgstr ""
 
-#: includes/ajax-actions.php:455
+#: includes/ajax-actions.php:454
 msgid "All styles are refreshed"
 msgstr ""
 
-#: includes/ajax-actions.php:486
+#: includes/ajax-actions.php:485
 msgid "No styles found to refresh"
 msgstr ""
 
-#: includes/class-bsf-menu.php:83 includes/class-bsf-menu.php:422
+#: includes/class-bsf-menu.php:121 includes/class-bsf-menu.php:493
 msgid "Dashboard"
 msgstr ""
 
-#: includes/class-bsf-menu.php:91
+#: includes/class-bsf-menu.php:129
 msgid "Settings"
 msgstr ""
 
-#: includes/class-bsf-menu.php:282
+#: includes/class-bsf-menu.php:339
 msgid "Knowledge Base"
 msgstr ""
 
-#: includes/class-bsf-menu.php:442
+#: includes/class-bsf-menu.php:515
 msgid "Version"
 msgstr ""
 
-#: includes/class-bsf-menu.php:445
+#: includes/class-bsf-menu.php:518
 msgid "Refresh Bundled Products"
 msgstr ""
 
-#: includes/common-helper-functions.php:2360
+#: includes/common-helper-functions.php:2380
 #. translators: %s link
 msgid "Powered by %s"
 msgstr ""
 
-#: includes/common-helper-functions.php:3069
+#: includes/common-helper-functions.php:3096
 msgid "You are not connected to any service."
 msgstr ""
 
-#: includes/common-helper-functions.php:3097
-#: includes/common-helper-functions.php:3113
+#: includes/common-helper-functions.php:3124
+#: includes/common-helper-functions.php:3140
 #. translators: %s site URL
 msgid ""
 "[FORM_SUBMISSION_DATA]\n"
@@ -4107,7 +4116,7 @@ msgid ""
 "<strong>[DESIGN_NAME]</strong> on %2$s (%3$s)"
 msgstr ""
 
-#: includes/common-helper-functions.php:3100
+#: includes/common-helper-functions.php:3127
 #. Translators: %s style name
 msgid "Call-to-action \"%s\" is not connected to any service."
 msgstr ""

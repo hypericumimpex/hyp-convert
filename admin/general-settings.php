@@ -41,10 +41,16 @@
 				),
 			);
 
-			$hide_branding = get_option( 'cpro_hide_branding' );
+			$hide_branding = ( is_multisite() ) ? get_site_option( '_cpro_hide_branding' ) : get_option( 'cpro_hide_branding' );
 
 			if ( '1' == $hide_branding ) {
 				unset( $nav_menus['branding'] );
+			}
+
+			if ( defined( 'CP_HIDE_WHITE_LABEL' ) ) {
+				if ( CP_HIDE_WHITE_LABEL ) {
+					unset( $nav_menus['branding'] );
+				}
 			}
 
 			foreach ( $nav_menus as $slug => $nav_menu ) {

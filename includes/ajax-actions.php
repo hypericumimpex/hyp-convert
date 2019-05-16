@@ -239,9 +239,8 @@ if ( ! function_exists( 'cpro_get_posts_by_query' ) ) {
 		$post_types = get_post_types( $args, $output, $operator );
 
 		$post_types['Posts'] = 'post';
-		if ( ! $is_singular ) {
-			$post_types['Pages'] = 'page';
-		}
+
+		$post_types['Pages'] = 'page';
 
 		foreach ( $post_types as $key => $post_type ) {
 			$data = array();

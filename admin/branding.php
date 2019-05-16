@@ -19,6 +19,7 @@
 		$plugin_author_url  = $branding['author_url'];
 		$kb_url             = $branding['kb_url'];
 		$support_url        = $branding['support_url'];
+		$image_url          = $branding['image_url'];
 		$addon_desc         = $branding['addon_desc'];
 
 		$kbval      = ( isset( $branding['kb_enabled'] ) && '1' == $branding['kb_enabled'] ) ? 1 : 0;
@@ -26,6 +27,9 @@
 
 		$supportval      = ( isset( $branding['support_enabled'] ) && '1' == $branding['support_enabled'] ) ? 1 : 0;
 		$support_checked = ( isset( $branding['support_enabled'] ) && '1' == $branding['support_enabled'] ) ? 'checked="checked"' : '';
+
+		$imageval      = ( isset( $branding['image_enabled'] ) && '1' == $branding['image_enabled'] ) ? 1 : 0;
+		$image_checked = ( isset( $branding['image_enabled'] ) && '1' == $branding['image_enabled'] ) ? 'checked="checked"' : '';
 
 		$hide_branding_val = ( isset( $branding['hide_branding'] ) && '1' == $branding['hide_branding'] ) ? 1 : 0;
 
@@ -150,6 +154,30 @@
 
 				<tr class="cp-settings-row">
 					<th scope="row">
+						<label for="cpro_branding_enable_image"><strong><?php _e( 'Enable Custom Image', 'convertpro' ); ?></strong>
+							<span class="cp-tooltip-icon has-tip" data-position="top" style="cursor: help;" title="<?php _e( 'Enable this option to display support link in Help tab.', 'convertpro' ); ?>"><i class="dashicons dashicons-editor-help"></i></span>
+						</label>
+					</th>
+					<td>
+						<div class="cp-switch-wrapper">
+							<input type="text"  id="cpro_branding_enable_image" class="form-control cp-input cp-switch-input" name="cpro_branding_enable_image" value="<?php echo $imageval; ?>" />
+							<input type="checkbox" <?php echo $image_checked; ?> id="cpro_branding_enable_image_btn_<?php echo $uniq; ?>"  class="ios-toggle cp-switch-input switch-checkbox" value="<?php echo $imageval; ?>" >
+							<label class="cp-switch-btn checkbox-label" data-on=<?php _e( 'ON', 'convertpro' ); ?>  data-off="<?php _e( 'OFF', 'convertpro' ); ?>" data-id="cpro_branding_enable_image" for="cpro_branding_enable_image_btn_<?php echo $uniq; ?>"></label>
+						</div>
+					</td>
+				</tr>
+				<tr class="cp-settings-row <?php echo ( ! $imageval ) ? 'cp-hidden' : ''; ?> cpro_branding_url_image-row">
+					<th scope="row">
+						<label for="cpro_branding_enable_image"><strong><?php _e( 'Custom Image URL', 'convertpro' ); ?></strong>
+						</label>
+					</th>
+					<td>
+						<input type='text' name="cpro_branding_url_image" value="<?php echo $image_url; ?>" placeholder="<?php echo CP_IMAGE_URL; ?>" id="cpro_branding_url_image">
+					</td>
+				</tr>
+
+				<tr class="cp-settings-row">
+					<th scope="row">
 						<label for="cpro_hide_branding"><strong><?php _e( 'Hide White Label Settings', 'convertpro' ); ?></strong>
 							<span class="cp-tooltip-icon has-tip" data-position="top" style="cursor: help;" title="<?php _e( 'Enable this option to hide White Label settings. Re-activate the plugin to enable this form again.', 'convertpro' ); ?>"><i class="dashicons dashicons-editor-help"></i></span>
 						</label>
@@ -167,6 +195,7 @@
 		</div>
 		<p class="submit">
 			<input type="hidden" name="curr_tab" value="1">
+			<input type="hidden" name="cp_branding" value="1">
 			<input type="hidden" name="cp-update-settings-nonce" id="cp-update-settings-nonce" value="<?php echo wp_create_nonce( 'cp-update-settings-nonce' ); ?>" />
 			<button type="submit" class="cp-btn-primary cp-md-btn cp-button-style button-update-settings cp-submit-settings"><?php _e( 'Save Settings', 'convertpro' ); ?></button>
 		</p>

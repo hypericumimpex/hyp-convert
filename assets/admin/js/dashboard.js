@@ -1128,6 +1128,17 @@ jQuery( document ).ready(function($) {
 				}
 			}, 200 );
 		}
+
+		if( id == 'cpro_branding_enable_image' ) {
+			setTimeout( function() {
+				if( $( 'input[name=' + id + ']' ).val() == '1' ) {
+					$( '.cpro_branding_url_image-row' ).removeClass( 'cp-hidden' );
+				} else {
+					$( '.cpro_branding_url_image-row' ).addClass( 'cp-hidden' );
+				}
+			}, 200 );
+		}
+
 	} );
 
 

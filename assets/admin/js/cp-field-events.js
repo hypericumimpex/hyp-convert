@@ -526,7 +526,7 @@ var ConvertProField = {
 			type = $('#'+for_edit).attr('data-type');	
 
 			// for radio button type field
-			if( name == 'btn_text_align' || name == 'close_text_align' ) {
+			if( name == 'btn_text_align' || name == 'close_text_align' || name == 'countdown_text_align' ) {
 				value = jQuery('input[name="' + name + '"]:checked').val();
 			}	
 

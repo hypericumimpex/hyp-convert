@@ -620,8 +620,8 @@
 
             // count button click as conversion
             if( count_conversion ) {
-
-				var category = "Convert Pro";
+            	// category name as per the plugin name is set.
+				var category = cp_ga_object.ga_category_name;
 			    var action   = 'conversion';
 			    var label    =  btn.closest( ".cp-popup-container" ).data("styleslug");
 

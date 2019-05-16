@@ -61,7 +61,7 @@ class CP_Geolite_Integration {
 
 			$reader->close();
 		} catch ( Exception $e ) {
-			error_log( 'CP Geo Warning: $e' );
+			error_log( 'CP Geo Warning: ' . $e );
 		}
 
 		return sanitize_text_field( strtoupper( $iso_code ) );

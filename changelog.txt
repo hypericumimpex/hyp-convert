@@ -1,3 +1,36 @@
+Version 1.3.6 May 15, 2019
+- Fix: Security update with cross-site scripting vulnerability issue.
+
+Version 1.3.5 April 25, 2019
+
+- New: Text Alignment for Countdown Timer.  
+- Improvement: AB Test if cookie is ON for CTA.
+- Fix: CTA translation issue with WPML after WPML update.
+- Fix: WooCommerce deprecated function notice.
+- Fix: Plugin name White label not working for PHP constant.
+- Fix: GeoIP warning for multiple IP addresses.
+- Fix: UAEL - Post Widget author name conflict when excerpt is ON.
+
+Version 1.3.4 April 10, 2019
+
+- New: Search option to Search mailer in Connect section.  
+- New: Whitelabel - Allow white label strings to be updated using PHP constants. - https://www.convertpro.net/docs/disable-white-label-settings-for-other-user-roles-on-website/
+- Improvement: Whitelabel - Permanently hide white label option using a constant. - https://www.convertpro.net/docs/how-to-disable-the-white-label-settings-permanently?/
+- Improvement: Whitelabel - Option to add image in White Label.
+- Improvement: Whitelabel - For multisite.
+- Improvement: Replace plugin strings on the updates page.
+- Improvement: Before/After CTA - Specific Page target option.
+- Improvement: Removed title tags from Shapes for better SEO.
+- Improvement: CP Geo Warning proper handling.
+- Fix: Google Tag Manager tracking not working when White Label.
+- Fix: Warning while fonts typecasting.
+- Fix: Panel Overlay & Background Image not working.
+- Fix: WooCommerce Store Exporter deluxe plugin JS Conflict.
+- Fix: Switching Product plugin JS Conflict.
+- Fix: Multi-rating plugin JS Conflict.
+- Fix: Showcase Pro(Child theme of Genesis Parent theme) theme JS Conflicts.
+- Fix: Google font Pipe for WpRocket.
+
 Version 1.3.3 March 04, 2019
 
 - New: Google reCAPTCHA field.                          

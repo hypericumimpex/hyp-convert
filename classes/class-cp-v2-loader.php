@@ -106,15 +106,38 @@ if ( ! class_exists( 'Cp_V2_Loader' ) ) {
 		 */
 		static public function get_branding() {
 
-			$branding['name']              = get_option( 'cpro_branding_plugin_name' );
-			$branding['description']       = get_option( 'cpro_branding_plugin_desc' );
-			$branding['author']            = get_option( 'cpro_branding_plugin_author_name' );
-			$branding['author_url']        = esc_url( get_option( 'cpro_branding_plugin_author_url' ) );
-			$branding['kb_enabled']        = get_option( 'cpro_branding_enable_kb' );
-			$branding['kb_url']            = esc_url( get_option( 'cpro_branding_url_kb' ) );
-			$branding['support_enabled']   = get_option( 'cpro_branding_enable_support' );
-			$branding['support_url']       = esc_url( get_option( 'cpro_branding_url_support' ) );
-			$branding['addon_desc']        = get_option( 'cpro_addon_branding_plugin_desc' );
+			$branding['name'] = get_option( 'cpro_branding_plugin_name' );
+			if ( defined( 'CPRO_CUSTOM_BRANDING_NAME' ) ) {
+				$branding['name'] = CPRO_CUSTOM_BRANDING_NAME;
+			}
+			$branding['description'] = get_option( 'cpro_branding_plugin_desc' );
+			if ( defined( 'CPRO_CUSTOM_DESCRIPTION' ) ) {
+				$branding['description'] = CPRO_CUSTOM_DESCRIPTION;
+			}
+			$branding['author'] = get_option( 'cpro_branding_plugin_author_name' );
+			if ( defined( 'CPRO_CUSTOM_AUTHOR_NAME' ) ) {
+				$branding['author'] = CPRO_CUSTOM_AUTHOR_NAME;
+			}
+			$branding['author_url'] = esc_url( get_option( 'cpro_branding_plugin_author_url' ) );
+			if ( defined( 'CPRO_CUSTOM_AUTHOR_URL' ) ) {
+				$branding['author_url'] = CPRO_CUSTOM_AUTHOR_URL;
+			}
+			$branding['kb_enabled'] = get_option( 'cpro_branding_enable_kb' );
+			$branding['kb_url']     = esc_url( get_option( 'cpro_branding_url_kb' ) );
+			if ( defined( 'CPRO_CUSTOM_KNOWLEDGE_BASE_URL' ) ) {
+				$branding['kb_url'] = esc_url( CPRO_CUSTOM_KNOWLEDGE_BASE_URL );
+			}
+			$branding['support_enabled'] = get_option( 'cpro_branding_enable_support' );
+			$branding['support_url']     = esc_url( get_option( 'cpro_branding_url_support' ) );
+			if ( defined( 'CPRO_CUSTOM_SUPPORT_URL' ) ) {
+				$branding['support_url'] = esc_url( CPRO_CUSTOM_SUPPORT_URL );
+			}
+			$branding['image_enabled'] = get_option( 'cpro_branding_enable_image' );
+			$branding['image_url']     = esc_url( get_option( 'cpro_branding_url_image' ) );
+			$branding['addon_desc']    = get_option( 'cpro_addon_branding_plugin_desc' );
+			if ( defined( 'CPRO_CUSTOM_ADDON_DESCRIPTION' ) ) {
+				$branding['addon_desc'] = CPRO_CUSTOM_ADDON_DESCRIPTION;
+			}
 			$branding['hide_branding']     = get_option( 'cpro_hide_branding' );
 			$branding['hide_refresh_temp'] = get_option( 'cpro_hide_refresh_template' );
 
@@ -123,6 +146,62 @@ if ( ! class_exists( 'Cp_V2_Loader' ) ) {
 			$branding['hide_branding']   = ( false === $branding['hide_branding'] || '0' == $branding['hide_branding'] ) ? '0' : '1';
 
 			$branding['hide_refresh_temp'] = ( false === $branding['hide_refresh_temp'] || '0' == $branding['hide_refresh_temp'] ) ? '0' : '1';
+
+			if ( is_multisite() ) {
+				$branding = Cp_V2_Loader::get_multisite_branding();
+			}
+
+			return $branding;
+		}
+
+		/**
+		 * Returns Branding details for the plugin if it is multisite.
+		 *
+		 * @since 1.3.4
+		 * @return array
+		 */
+		static public function get_multisite_branding() {
+
+				$branding['name'] = get_site_option( '_cpro_branding_plugin_name' );
+			if ( defined( 'CPRO_CUSTOM_BRANDING_NAME' ) ) {
+					$branding['name'] = CPRO_CUSTOM_BRANDING_NAME;
+			}
+			$branding['description'] = get_site_option( '_cpro_branding_plugin_desc' );
+			if ( defined( 'CPRO_CUSTOM_DESCRIPTION' ) ) {
+				$branding['description'] = CPRO_CUSTOM_DESCRIPTION;
+			}
+				$branding['author'] = get_site_option( '_cpro_branding_plugin_author_name' );
+			if ( defined( 'CPRO_CUSTOM_AUTHOR_NAME' ) ) {
+				$branding['author'] = CPRO_CUSTOM_AUTHOR_NAME;
+			}
+				$branding['author_url'] = esc_url( get_site_option( '_cpro_branding_plugin_author_url' ) );
+			if ( defined( 'CPRO_CUSTOM_AUTHOR_URL' ) ) {
+				$branding['author_url'] = CPRO_CUSTOM_AUTHOR_URL;
+			}
+				$branding['kb_enabled'] = get_site_option( '_cpro_branding_enable_kb' );
+				$branding['kb_url']     = esc_url( get_site_option( '_cpro_branding_url_kb' ) );
+			if ( defined( 'CPRO_CUSTOM_KNOWLEDGE_BASE_URL' ) ) {
+				$branding['kb_url'] = esc_url( CPRO_CUSTOM_KNOWLEDGE_BASE_URL );
+			}
+				$branding['support_enabled'] = get_site_option( '_cpro_branding_enable_support' );
+				$branding['support_url']     = esc_url( get_site_option( '_cpro_branding_url_support' ) );
+			if ( defined( 'CPRO_CUSTOM_SUPPORT_URL' ) ) {
+				$branding['support_url'] = esc_url( CPRO_CUSTOM_SUPPORT_URL );
+			}
+				$branding['image_enabled'] = get_site_option( '_cpro_branding_enable_image' );
+				$branding['image_url']     = esc_url( get_site_option( '_cpro_branding_url_image' ) );
+				$branding['addon_desc']    = get_site_option( '_cpro_addon_branding_plugin_desc' );
+			if ( defined( 'CPRO_CUSTOM_ADDON_DESCRIPTION' ) ) {
+				$branding['addon_desc'] = CPRO_CUSTOM_ADDON_DESCRIPTION;
+			}
+				$branding['hide_branding']     = get_site_option( '_cpro_hide_branding' );
+				$branding['hide_refresh_temp'] = get_site_option( '_cpro_hide_refresh_template' );
+
+				$branding['kb_enabled']      = ( false === $branding['kb_enabled'] || '1' == $branding['kb_enabled'] ) ? '1' : '0';
+				$branding['support_enabled'] = ( false === $branding['support_enabled'] || '1' == $branding['support_enabled'] ) ? '1' : '0';
+				$branding['hide_branding']   = ( false === $branding['hide_branding'] || '0' == $branding['hide_branding'] ) ? '0' : '1';
+
+				$branding['hide_refresh_temp'] = ( false === $branding['hide_refresh_temp'] || '0' == $branding['hide_refresh_temp'] ) ? '0' : '1';
 
 			return $branding;
 		}
@@ -185,13 +264,22 @@ if ( ! class_exists( 'Cp_V2_Loader' ) ) {
 			define( 'CP_POWERED_BY_URL', 'https://www.convertpro.net/?utm_source=customer-website&utm_medium=credit-link&utm_campaign=powered-by' );
 			define( 'CP_KNOWLEDGE_BASE_URL', 'https://www.convertpro.net/docs/' );
 			define( 'CP_SUPPORT_URL', 'https://www.convertpro.net/submit-a-ticket/' );
+			define( 'CP_IMAGE_URL', 'Custom Image URL' );
 			define( 'CPRO_AUTHOR_NAME', 'Brainstorm Force' );
 			define( 'CPRO_AUTHOR_URL', 'https://www.brainstormforce.com' );
 			define( 'CPRO_DESCRIPTION', CP_PRO_NAME . ' is an advanced lead generation popup plugin with a drag and drop editor that helps you create beautiful popups and opt-in forms to boost your website conversions. With ' . CP_PRO_NAME . ' you can build email lists, drive traffic, promote videos, offer lead magnets and a lot more.' );
 
-			$plugin_name = get_option( 'cpro_branding_plugin_name' );
+			$cpro_multisite_flag = 0;
+			if ( is_multisite() ) {
+				$cpro_multisite_flag = 1;
+			}
+
+			$plugin_name = ( 0 == $cpro_multisite_flag ) ? get_option( 'cpro_branding_plugin_name' ) : get_site_option( '_cpro_branding_plugin_name' );
 			$_name       = ( '' == $plugin_name ) ? CP_PRO_NAME : $plugin_name;
 
+			if ( defined( 'CPRO_CUSTOM_BRANDING_NAME' ) ) {
+				$_name = CPRO_CUSTOM_BRANDING_NAME;
+			}
 			define( 'CPRO_BRANDING_NAME', $_name );
 
 			// Remove convert pro from license registration listing.

@@ -1679,6 +1679,30 @@ var t_id                = -1;
                     }
                 }
             }
+
+            /* AB test if the CTA cookie set - start */
+            var cta_id = element.closest( '.cp-popup-container' ).data( 'class-id' );
+            var cookies_enabled = parseInt( configure_settings.cookies_enabled );
+            var abtest_id     = -1;
+            jQuery.each( ab_test, function( i, val ) {
+                if( jQuery.inArray( cta_id, val ) >= 0 ) {
+                    abtest_id = i;
+                }
+            });
+            
+            if ( '1' == cookies_enabled && ! cookie ) {
+                if( cookieTime ) {
+                    if( abtest_id != -1 ) {
+                        if( cp_cookies.get( "cp_v2_ab_test-" + abtest_id ) != undefined ) {
+                            var abtest_array = jQuery.parseJSON( cp_cookies.get( "cp_v2_ab_test-" + abtest_id ) );
+                            for ( var ab = 0 ; ab < abtest_array.length ; ab++ ) {
+                                cp_cookies.set( 'cp_style_'+abtest_array[ab], true, { expires: cookieTime } );
+                            }
+                        }
+                    }
+                }
+            }
+            /* AB test if the CTA cookie set - end */
         },
 
         /**
@@ -1711,6 +1735,24 @@ var t_id                = -1;
                 global_cp_cookies.set( cookieName, true, { expires: cookieTime } );
             }
             // closed cookie new section start.
+
+            /* AB test if the CTA cookie set - start */
+            var abtest_id                    = this._getCurrentABTest();
+
+            if ( '1' == cookies_enabled && ! cookie ) {
+
+                if( abtest_id != -1 ) {
+                    if( global_cp_cookies.get( "cp_v2_ab_test-" + abtest_id ) != undefined ) {
+
+                        var abtest_array = jQuery.parseJSON( global_cp_cookies.get( "cp_v2_ab_test-" + abtest_id )) ;
+                        for ( var ab = 0 ; ab < abtest_array.length ; ab++ ) {
+                            global_cp_cookies.set( 'cp_style_'+abtest_array[ab], true, { expires: cookieTime } );
+                        }
+                    }
+                }
+            }
+            /* AB test if the CTA cookie set - end */
+
             var cookies_enabled_closed     = this.getConfigure('cookies_enabled_closed'),
                 cookieTime_closed          = parseInt( this.getConfigure('closed_cookie_new') ),
                 enable_cookies_class_closed = this.getConfigure('enable_cookies_class_closed');

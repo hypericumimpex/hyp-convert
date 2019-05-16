@@ -59,12 +59,50 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 		public static $current_slug = '';
 
 		/**
+		 * Cpro multisite flag
+		 *
+		 * @var cpro_multisite_flag
+		 */
+		public static $cpro_multisite_flag = 0;
+
+		/**
 		 * Constructor
 		 */
 		function __construct() {
 			add_action( 'admin_menu', array( $this, 'add_admin_menu' ), 99 );
 			add_action( 'admin_menu', array( $this, 'add_admin_menu_rename' ), 9999 );
 			add_action( 'parent_file', array( $this, 'menu_highlight' ) );
+
+			/* White Label Code Start */
+
+			if ( is_multisite() ) {
+				self::$cpro_multisite_flag = 1;
+			}
+
+			add_filter( 'bsf_product_name_convertpro', array( $this, 'cpro_plugin_name_atts' ) );
+
+			$atts = esc_attr( 0 == self::$cpro_multisite_flag ? get_option( 'cpro_branding_plugin_author_name' ) : get_site_option( '_cpro_branding_plugin_author_name' ) );
+
+			if ( '' !== $atts && trim( $atts ) ) {
+				add_filter( 'bsf_product_author_convertpro', array( $this, 'cpro_author_atts' ) );
+			}
+
+			$atts = esc_attr( 0 == self::$cpro_multisite_flag ? get_option( 'cpro_branding_plugin_desc' ) : get_site_option( '_cpro_branding_plugin_desc' ) );
+
+			if ( '' !== $atts && trim( $atts ) ) {
+				add_filter( 'bsf_product_description_convertpro', array( $this, 'cpro_description_atts' ) );
+			}
+
+			$atts = esc_attr( 0 == self::$cpro_multisite_flag ? get_option( 'cpro_branding_enable_image' ) : get_site_option( '_cpro_branding_enable_image' ) );
+			if ( '0' !== $atts ) {
+				add_filter( 'bsf_product_icons_convertpro', array( $this, 'cpro_icons_atts' ) );
+				add_filter( 'bsf_product_icons_convertpro-addon', array( $this, 'cpro_icons_atts' ) );
+			}
+
+			add_filter( 'gettext', array( $this, 'plugin_gettext_convertpro' ) );
+			add_filter( 'gettext', array( $this, 'plugin_gettext_convertpro_addon' ) );
+
+			/* White Label Code End */
 
 			add_action( 'bsf_menu_dashboard_action', array( $this, 'dashboard_page' ) );
 			add_action( 'bsf_menu_create_new_action', array( $this, 'add_new_popup' ) );
@@ -253,13 +291,29 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 
 			$cp_logo = CP_V2_BASE_URL . 'assets/admin/img/cp-pro-logo.png';
 
+			if ( is_multisite() ) {
+				self::$cpro_multisite_flag = 1;
+			}
+
+			$cp_custom_image_enabled = esc_attr( ( 0 == self::$cpro_multisite_flag ) ? get_option( 'cpro_branding_enable_image' ) : get_site_option( '_cpro_branding_enable_image' ) );
+			$cp_custom_image         = ( 0 == self::$cpro_multisite_flag ) ? get_option( 'cpro_branding_url_image' ) : get_site_option( '_cpro_branding_url_image' );
+
 			?>
 			<div class='cp-parent-wrap'>
 				<div id="cp-menu-page" class="wrap">
 					<div class="cp-flex-center cp-header">
 						<div class="cp-about-header cp-logo">
-							<?php if ( CPRO_BRANDING_NAME != CP_PRO_NAME ) { ?>
-							<h1><?php echo CPRO_BRANDING_NAME; ?></h1>
+							<?php
+							if ( CPRO_BRANDING_NAME != CP_PRO_NAME || ( '0' != $cp_custom_image_enabled && '' != $cp_custom_image_enabled ) ) {
+
+								if ( '0' != $cp_custom_image_enabled && '' != $cp_custom_image_enabled ) {
+									if ( defined( 'CPRO_CUSTOM_IMAGE_URL' ) ) {
+										$cp_custom_image = CPRO_CUSTOM_IMAGE_URL;
+									}
+									?>
+										<img class="cp-custom-logo" src="<?php echo esc_url( $cp_custom_image ); ?>" align="left">
+									<?php } ?>
+									<h1><?php echo CPRO_BRANDING_NAME != CP_PRO_NAME ? CPRO_BRANDING_NAME : ''; ?></h1>
 							<?php } else { ?>
 							<img src="<?php echo esc_url( $cp_logo ); ?>">
 							<?php } ?>
@@ -267,16 +321,19 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 						<div class="cp-help-links">
 							<?php
 
-							$know_base_url   = esc_attr( get_option( 'cpro_branding_url_kb' ) );
-							$kb_enabled      = esc_attr( get_option( 'cpro_branding_enable_kb' ) );
-							$support_enabled = esc_attr( get_option( 'cpro_branding_enable_support' ) );
+							$know_base_url   = ( 0 == self::$cpro_multisite_flag ) ? get_option( 'cpro_branding_url_kb' ) : get_site_option( '_cpro_branding_url_kb' );
+							$kb_enabled      = esc_attr( ( 0 == self::$cpro_multisite_flag ) ? get_option( 'cpro_branding_enable_kb' ) : get_site_option( '_cpro_branding_enable_kb' ) );
+							$support_enabled = esc_attr( ( 0 == self::$cpro_multisite_flag ) ? get_option( 'cpro_branding_enable_support' ) : get_site_option( '_cpro_branding_enable_support' ) );
 
 							$know_base_url = ! $know_base_url ? CP_KNOWLEDGE_BASE_URL . '?utm_source=wp-dashboard&utm_medium=header-link&utm_campaign=knowledge-base' : $know_base_url;
 
-							$support_url = get_option( 'cpro_branding_url_support' );
+							$support_url = ( 0 == self::$cpro_multisite_flag ) ? get_option( 'cpro_branding_url_support' ) : get_site_option( '_cpro_branding_url_support' );
 							$support_url = ! $support_url ? CP_SUPPORT_URL . '?utm_source=wp-dashboard&utm_medium=header-link&utm_campaign=request-support' : $support_url;
 
 							if ( '0' != $kb_enabled ) {
+								if ( defined( 'CPRO_CUSTOM_KNOWLEDGE_BASE_URL' ) ) {
+									$know_base_url = CPRO_CUSTOM_KNOWLEDGE_BASE_URL;
+								}
 								?>
 								<a rel="noopener" href="<?php echo esc_url( $know_base_url ); ?>" target="_blank">                                
 									<span class="cp-link-icon"><i class="dashicons dashicons-book"></i></span><?php _e( 'Knowledge Base', 'convertpro' ); ?>
@@ -285,6 +342,9 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 							}
 
 							if ( '0' != $support_enabled ) {
+								if ( defined( 'CPRO_CUSTOM_SUPPORT_URL' ) ) {
+									$support_url = CPRO_CUSTOM_SUPPORT_URL;
+								}
 								?>
 								<a rel="noopener" href="<?php echo esc_url( $support_url ); ?>" target="_blank">
 								<span class="cp-link-icon"><i class="dashicons dashicons-admin-users"></i></span><?php _e( 'Request Support', 'convertpro' ); ?>
@@ -325,6 +385,7 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 			$settings           = $_POST['data'];
 			$access_roles_found = false;
 			$filter             = array();
+			$check_branding     = 0;
 
 			foreach ( $settings as $select ) {
 				if ( substr( $select['name'], -2 ) == '[]' ) {
@@ -349,7 +410,9 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 				if ( 'cp_access_role[]' == $setting['name'] ) {
 					$access_roles_found = true;
 				}
-
+				if ( 'cp_branding' == $setting['name'] ) {
+					$check_branding = 1;
+				}
 				update_option( $setting['name'], $setting['value'] );
 			}
 
@@ -379,6 +442,14 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 
 				if ( ! $is_other_plugin && ! $flag ) {
 					$url = admin_url( 'admin.php?page=' . self::$plugin_slug . '&action=general-settings#advanced' );
+				}
+			}
+
+			if ( is_multisite() ) {
+				foreach ( $settings as $key => $setting ) {
+					if ( 1 == $check_branding ) {
+						update_site_option( '_' . $setting['name'], $setting['value'] );
+					}
 				}
 			}
 
@@ -434,7 +505,9 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 			$reset_bundled_url = $current_url . '&remove-bundled-products&redirect=' . urlencode( $current_r_url );
 			$author_url        = get_option( 'cpro_branding_plugin_author_url' );
 			$author_url        = ! $author_url ? CPRO_AUTHOR_URL : $author_url;
-
+			if ( defined( 'CPRO_CUSTOM_AUTHOR_URL' ) ) {
+				$author_url = CPRO_CUSTOM_AUTHOR_URL;
+			}
 			echo'<div id="wpfooter" role="contentinfo" class="cp_admin_footer">
 				        <p id="footer-left" class="alignleft">
 				        <span id="footer-thankyou">Thank you for using <a href="' . esc_url( $author_url ) . '" target="_blank" rel="noopener" >' . CPRO_BRANDING_NAME . '</a>.</span>   </p>
@@ -455,6 +528,95 @@ if ( ! class_exists( 'Bsf_Menu' ) ) {
 			?>
 			<script type="text/javascript">window.location.replace('<?php echo admin_url(); ?>edit.php?page=<?php echo CP_PRO_SLUG; ?>-dashboard&view=knowledge_base'); </script>
 																				<?php
+		}
+
+		/**
+		 * White labels the plugin name.
+		 *
+		 * @return string
+		 */
+		function cpro_plugin_name_atts() {
+
+			$atts = sanitize_title( CPRO_BRANDING_NAME );
+
+			return $atts;
+		}
+
+		/**
+		 * White labels the plugin author.
+		 *
+		 * @return string
+		 */
+		function cpro_author_atts() {
+			$atts = esc_attr( 0 == self::$cpro_multisite_flag ? get_option( 'cpro_branding_plugin_author_name' ) : get_site_option( '_cpro_branding_plugin_author_name' ) );
+
+			if ( defined( 'CPRO_CUSTOM_AUTHOR_NAME' ) ) {
+				$atts = CPRO_CUSTOM_AUTHOR_NAME;
+			}
+			return $atts;
+		}
+
+		/**
+		 * White labels the plugin description.
+		 *
+		 * @return string
+		 */
+		function cpro_description_atts() {
+			$atts = esc_attr( 0 == self::$cpro_multisite_flag ? get_option( 'cpro_branding_plugin_desc' ) : get_site_option( '_cpro_branding_plugin_desc' ) );
+			if ( defined( 'CPRO_CUSTOM_DESCRIPTION' ) ) {
+				$atts = CPRO_CUSTOM_DESCRIPTION;
+			}
+			return $atts;
+		}
+
+		/**
+		 * White labels the plugin image.
+		 *
+		 * @return array
+		 */
+		function cpro_icons_atts() {
+			$atts = 0 == self::$cpro_multisite_flag ? get_option( 'cpro_branding_url_image' ) : get_site_option( '_cpro_branding_url_image' );
+			if ( defined( 'CPRO_CUSTOM_IMAGE_URL' ) ) {
+				$atts = CPRO_CUSTOM_IMAGE_URL;
+			}
+			$icon = array(
+				'1x'      => esc_attr( $atts ),
+				'2x'      => esc_attr( $atts ),
+				'default' => esc_attr( $atts ),
+			);
+			return $icon;
+		}
+
+		/**
+		 * White labels the plugin using the gettext filter
+		 * to cover areas that we can't access.
+		 *
+		 * @param string $text Text.
+		 * @return string
+		 */
+		function plugin_gettext_convertpro( $text ) {
+
+			if ( is_admin() && 'Convert Pro' == $text ) {
+				$text = CPRO_BRANDING_NAME;
+			}
+
+			return $text;
+		}
+
+		/**
+		 * White labels the plugin using the gettext filter for addon
+		 * to cover areas that we can't access.
+		 *
+		 * @param string $text Text.
+		 * @return string
+		 */
+		function plugin_gettext_convertpro_addon( $text ) {
+
+			if ( is_admin() && 'Convert Pro - Addon' == $text ) {
+				$text = CPRO_BRANDING_NAME . ' - Addon';
+			}
+
+			return $text;
 		}
 	}
 

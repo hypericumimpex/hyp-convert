@@ -519,7 +519,11 @@ function cp_v2_is_style_visible( $style_id ) {
 	$post_id = ( ! is_404() && ! is_search() && ! is_archive() && ! is_home() ) ? $post->ID : false;
 	if ( class_exists( 'WooCommerce' ) ) {
 		if ( is_shop() ) {
-			$post_id = woocommerce_get_page_id( 'shop' );
+			if ( function_exists( 'wc_get_page_id' ) ) {
+				$post_id = wc_get_page_id( 'shop' );
+			} else {
+				$post_id = woocommerce_get_page_id( 'shop' );
+			}
 		}
 	}
 	$post               = $old_post;
@@ -601,6 +605,9 @@ function cp_v2_parse_geo_condition( $rules ) {
 				$ipaddress = getenv( 'HTTP_CLIENT_IP' );
 			} elseif ( getenv( 'HTTP_X_FORWARDED_FOR' ) ) {
 				$ipaddress = getenv( 'HTTP_X_FORWARDED_FOR' );
+				// HTTP_X_FORWARDED_FOR sometimes returns internal or local IP address, which is not usually useful. Also, it would return a comma separated list if it was forwarded from multiple ipaddresses.
+				$addr      = explode( ',', $ipaddress );
+				$ipaddress = $addr[0];
 			} elseif ( getenv( 'HTTP_X_FORWARDED' ) ) {
 				$ipaddress = getenv( 'HTTP_X_FORWARDED' );
 			} elseif ( getenv( 'HTTP_FORWARDED_FOR' ) ) {
@@ -1701,10 +1708,13 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 								}
 							} elseif ( 'image' == $bg_type ) {
 								if ( 'info_bar' == $module_type ) {
-									$style            .= $style_prop->parameter . ':' . $img_overlay_bg . ';';
-									$bg_overlay_style .= $style_prop->parameter . ':' . $img_overlay_bg . ';';
+									$style .= 'background-blend-mode:overlay;';
+									$style .= $style_prop->parameter . ':' . $img_overlay_bg . ';';
+									// $bg_overlay_style .= $style_prop->parameter . ':' . $img_overlay_bg . ';';.
 								} elseif ( 'welcome_mat' == $module_type || 'full_screen' == $module_type ) {
-										$bg_overlay_style .= $style_prop->parameter . ':' . $img_overlay_bg . ';';
+									$style .= 'background-blend-mode:overlay;';
+									$style .= $style_prop->parameter . ':' . $img_overlay_bg . ';';
+									// $bg_overlay_style .= $style_prop->parameter . ':' . $img_overlay_bg . ';';.
 								} else {
 										$step_dependent_style .= $style_prop->parameter . ':' . $img_overlay_bg . ';background-blend-mode: overlay;';
 								}
@@ -2125,6 +2135,16 @@ function cp_generate_style( $style_array, $panel_id, $style_id, $type, $device_i
 				$style .= ' }';
 				break;
 
+			case 'countdown-text-align':
+				$val = $style_array->{$style_prop->name};
+				if ( 'justify' == $val ) {
+					$val = 'auto';
+				}
+				$style .= '.cp_style_' . $style_id . ' #' . $panel_id . '-' . $style_id . ' .cp-target .cp-countdown-holding { ';
+				$style .= 'text-align: -webkit-' . $val;
+				$style .= ' }';
+				break;
+
 			default:
 				break;
 		}
@@ -2363,7 +2383,10 @@ if ( ! function_exists( 'cp_render_popup' ) ) {
 			$is_display_credit_link = esc_attr( get_option( 'cp_credit_option' ) );
 
 			if ( '0' !== $is_display_credit_link ) {
-				$branding_agency_url = get_option( 'cpro_branding_plugin_author_url' );
+				$branding_agency_url = ( ! is_multisite() ) ? esc_url( get_option( 'cpro_branding_plugin_author_url' ) ) : esc_url( get_site_option( '_cpro_branding_plugin_author_url' ) );
+				if ( defined( 'CPRO_CUSTOM_AUTHOR_URL' ) ) {
+					$branding_agency_url = esc_url( CPRO_CUSTOM_AUTHOR_URL );
+				}
 
 				$powered_by_url = false == $branding_agency_url ? CP_POWERED_BY_URL : $branding_agency_url;
 
@@ -2736,7 +2759,7 @@ function cp_v2_enqueue_google_fonts( $style_id ) {
 		$fonts->panel_global_font->weight = $cp_global_font['weight'];
 	}
 
-	if ( null !== $fonts && count( get_object_vars( $fonts ) ) > 0 ) {
+	if ( null !== $fonts && count( (array) ( $fonts ) ) > 0 ) {
 		foreach ( $fonts as $key => $value ) {
 			$font_family  = $value->family;
 			$font_wt      = $value->weight;
@@ -2761,9 +2784,9 @@ function cp_v2_enqueue_google_fonts( $style_id ) {
 			$weight = implode( ',', $font );
 
 			if ( 'Inherit' == $weight ) {
-				$font_string .= $key . '|';
+				$font_string .= $key . ':normal,|';
 			} else {
-				$font_string .= $key . ':' . $weight . '|';
+				$font_string .= $key . ':' . $weight . ',|';
 			}
 		}
 	}
@@ -2780,6 +2803,10 @@ function cp_v2_enqueue_google_fonts( $style_id ) {
 
 	// Filter to check if google font is enabled or not?
 	$display_font = apply_filters( 'cpro_disable_google_font', $style_id );
+
+	if ( ! empty( $font_string ) ) {
+		$font_string = substr( $font_string, 0, -1 );
+	}
 
 	if ( '' !== $font_string && $display_font ) {
 		$google_font_url = '//fonts.googleapis.com/css?family=' . $font_string;
@@ -3000,7 +3027,7 @@ add_action( 'wp_ajax_cp_v2_notify_admin', 'cp_v2_notify_admin' );
 function cp_v2_notify_admin() {
 	check_ajax_referer( 'cp_add_subscriber_nonce', '_nonce' );
 
-	$style_id = isset( $_POST['style_id'] ) ? esc_attr( $_POST['style_id'] ) : '';
+	$style_id = isset( $_POST['style_id'] ) ? sanitize_text_field( esc_attr( $_POST['style_id'] ) ) : '';
 
 	if ( '' !== $style_id ) {
 		$hp_field = 'cpro_hp_field_' . $style_id;
@@ -3020,7 +3047,7 @@ function cp_v2_notify_admin() {
 		'style_slug' => '',
 	);
 	$post_data              = sanitize_post_data( $_POST );
-	$style_id               = isset( $post_data['style_id'] ) ? (int) esc_attr( $post_data['style_id'] ) : '';
+	$style_id               = isset( $post_data['style_id'] ) ? (int) sanitize_text_field( esc_attr( $post_data['style_id'] ) ) : '';
 	$post                   = get_post( (int) $style_id );
 	$response['style_slug'] = $post->post_name;
 	$email_meta             = get_post_meta( $style_id, 'connect', true );
@@ -3081,7 +3108,7 @@ function cp_v2_notify_admin() {
  */
 function cpro_notify_via_email( $post_data, $email_meta ) {
 
-	$style_id   = isset( $post_data['style_id'] ) ? (int) esc_attr( $post_data['style_id'] ) : '';
+	$style_id   = isset( $post_data['style_id'] ) ? (int) sanitize_text_field( esc_attr( $post_data['style_id'] ) ) : '';
 	$settings   = $post_data;
 	$style_name = get_the_title( $style_id );
 

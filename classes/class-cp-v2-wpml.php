@@ -27,6 +27,14 @@ if ( ! class_exists( 'Cp_V2_WPML' ) ) {
 		private static $instance;
 
 		/**
+		 * The orignal link of CTA.
+		 *
+		 * @since 1.3.5
+		 * @var string $original_links_cta
+		 */
+		private $original_links_cta = array();
+
+		/**
 		 * Languages.
 		 *
 		 * @since 1.1.4
@@ -61,6 +69,8 @@ if ( ! class_exists( 'Cp_V2_WPML' ) ) {
 			add_filter( 'cpro_front_end_cta_id', array( $this, 'get_translated_id' ) );
 
 			add_filter( 'wpml_link_to_translation', array( $this, 'modify_translation_link' ), 10, 4 );
+
+			add_filter( 'wpml_post_status_display_html', array( $this, 'modify_translation_link_new' ), 11, 4 );
 
 			global $sitepress;
 			$current_language = $sitepress->get_current_language();
@@ -153,7 +163,7 @@ if ( ! class_exists( 'Cp_V2_WPML' ) ) {
 			$flags_column = '';
 
 			foreach ( self::$languages as $language_data ) {
-				$flags_column .= '<img src="' . esc_url( $sitepress->get_flag_url( $language_data['code'] ) ) . '" width="18" height="12" alt="' . esc_attr( $language_data['display_name'] ) . '" title="' . esc_attr( $language_data['display_name'] ) . '" style="margin:2px" />';
+				$flags_column .= '<img src="' . esc_url( $sitepress->get_flag_url( $language_data['code'] ) ) . '" width="18" height="12" alt="' . esc_attr( $language_data['display_name'] ) . '" title="' . esc_attr( $language_data['display_name'] ) . '" style="margin:2px;width:18px;" />';
 			}
 
 			$custom_cols = array(
@@ -175,6 +185,7 @@ if ( ! class_exists( 'Cp_V2_WPML' ) ) {
 		 * @param int    $trid trid.
 		 */
 		function modify_translation_link( $link, $post_id, $lang, $trid ) {
+			$this->original_links_cta[ $post_id ][ $lang ][ $trid ] = $link;
 
 			$post_type = get_post_type( $post_id );
 
@@ -186,6 +197,37 @@ if ( ! class_exists( 'Cp_V2_WPML' ) ) {
 
 			return $link;
 		}
+
+		/**
+		 * Function Name: modify_translation_link_new.
+		 * Function Description: modify translation link new.
+		 *
+		 * @since 1.3.5
+		 * @param string $html html for post edit.
+		 * @param int    $post_id post id.
+		 * @param string $lang language code.
+		 * @param int    $trid trid.
+		 */
+		function modify_translation_link_new( $html, $post_id, $lang, $trid ) {
+
+			$data_attributes = '';
+			$post_type       = get_post_type( $post_id );
+			$link            = '';
+			if ( CP_CUSTOM_POST_TYPE == $post_type && ( false !== strpos( $html, 'post-new' ) || false !== strpos( $html, 'admin' ) ) ) {
+
+				$module_type      = get_post_meta( $post_id, 'cp_module_type', true );
+				$link             = 'post-new.php?lang=' . $lang . '&post_type=cp_popups&trid=' . $trid . '&source_lang=en';
+				$link            .= '&master_post=' . $post_id . '&type=' . $module_type;
+				$link            .= '&save_now=true';
+				$data_attributes .= 'href="' . $link . '"';
+			}
+			if ( false !== strpos( $html, 'data-tm-job-id' ) ) {
+				$data_attributes = 'href="' . $this->original_links_cta[ $post_id ][ $lang ][ $trid ] . '"';
+			}
+
+			return str_replace( '<a ', '<a ' . $data_attributes . ' ', $html );
+		}
+
 	}
 
 	$ga_insights = Cp_V2_WPML::get_instance();

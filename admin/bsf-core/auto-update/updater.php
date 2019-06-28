@@ -31,7 +31,10 @@ if ( ! function_exists( 'bsf_get_remote_version' ) ) {
 
 		if ( ! is_wp_error( $request ) || wp_remote_retrieve_response_code( $request ) === 200 ) {
 			$result = json_decode( $request['body'] );
-			bsf_update_license_checked( $result->updated_licenses );
+
+			if( isset( $result->updated_licenses ) ) {
+				bsf_update_license_checked( $result->updated_licenses );
+			}
 
 			if ( ! $result->error ) {
 				return $result->updated_versions;

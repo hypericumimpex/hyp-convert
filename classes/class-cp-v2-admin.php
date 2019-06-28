@@ -248,6 +248,24 @@ final class CP_V2_Admin {
 		if ( ( 'edit' == $current_screen->base && CP_CUSTOM_POST_TYPE == $current_screen->post_type ) || ( ( 'post-new.php' == $hook || 'post.php' == $hook ) && ( isset( $post->post_type ) && CP_CUSTOM_POST_TYPE == $post->post_type ) ) ) {
 			if ( ( isset( $_GET['post'] ) && isset( $_GET['action'] ) && 'edit' == $_GET['action'] ) || 'add' == $current_screen->action ) {
 
+				// Fix Apply Online plugin JS Conflicts.
+				wp_dequeue_script( 'apply-online' );
+
+				// Fix Woo Birthday discount vouchers plugin JS Conflicts.
+				wp_dequeue_script( 'wbdv-admin-script' );
+
+				// Fix Custom Facebook Feed Pro - Extensions plugin JS Conflicts.
+				wp_dequeue_script( 'cff_ext_date_range' );
+
+				// Fix Schema and Structured data for wp plugin JS Conflicts.
+				wp_dequeue_script( 'saswp-main-js' );
+
+				// Fix WooCommerce Table rate Shipping plugin JS Conflicts.
+				wp_dequeue_script( 'betrs_settings_table_rates_js' );
+
+				// Fix Civic Cookie Control 8 plugin JS Conflicts.
+				wp_dequeue_script( 'civic_cookiecontrol_settings' );
+
 				// Fix Switching Product plugin JS Conflicts.
 				wp_dequeue_script( 'swProductAdminJs' );
 
@@ -277,6 +295,7 @@ final class CP_V2_Admin {
 				wp_dequeue_style( 'DailyMaverickOnePageSubscriptionCheckoutSubscriptionSliderJqueryUi-css' );
 
 				// Fix for Bridge theme js issue.
+				wp_dequeue_script( 'bridge-admin-default' );
 				wp_dequeue_script( 'default' );
 				wp_dequeue_script( 'qodef-ui-admin' );
 
@@ -677,6 +696,10 @@ final class CP_V2_Admin {
 				}
 				if ( wp_script_is( 'custom', 'enqueued' ) ) {
 					wp_dequeue_script( 'custom' );
+				}
+				// Sliced Invoices Plugin JS Conflict for CPRO editor.
+				if ( wp_script_is( 'jquery-ui-datetimepicker', 'enqueued' ) ) {
+					wp_deregister_script( 'jquery-ui-datetimepicker' );
 				}
 
 				$style_id = isset( $_GET['post'] ) ? esc_attr( $_GET['post'] ) : '';

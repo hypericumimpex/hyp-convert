@@ -921,7 +921,7 @@ class CP_Full_Screen extends cp_Framework {
 								'id'             => 'respective_to',
 								'name'           => 'respective_to',
 								'type'           => 'switch',
-								'default_value'  => true,
+								'default_value'  => false,
 								'label'          => __( 'Field Respective To', 'convertpro' ),
 								'hide_on_mobile' => true,
 								'options'        => array(
@@ -1157,7 +1157,7 @@ class CP_Full_Screen extends cp_Framework {
 								'id'             => 'respective_to',
 								'name'           => 'respective_to',
 								'type'           => 'switch',
-								'default_value'  => true,
+								'default_value'  => false,
 								'label'          => __( 'Field Respective To', 'convertpro' ),
 								'hide_on_mobile' => true,
 								'options'        => array(

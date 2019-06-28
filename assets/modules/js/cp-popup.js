@@ -2106,19 +2106,16 @@ var t_id                = -1;
             ) {
                 if ( 'bottom-right' == toggle_position ) {
                     popup_content.css({
-                        'transform': modal_transform + 'translateX(-50%)',
-                        "display" : "block"
+                        'transform': modal_transform + 'translateX(-50%)'
                     }); 
                 } else {
                     popup_content.css({
-                        'transform': modal_transform + 'translateX(0)',
-                        "display" : "block"
+                        'transform': modal_transform + 'translateX(0)'
                     });
                 }
             } else {
                 popup_content.css({
-                    'transform': modal_transform,
-                    "display" : "block"
+                    'transform': modal_transform
                 });
             }
 
@@ -2486,9 +2483,9 @@ var t_id                = -1;
             }
 
             jQuery('.cp-module-info_bar .cp-popup-wrapper .cp-popup').css({
-                'transform': toggle_transform
-            });
-            
+                    'transform': toggle_transform
+                });
+
         } else if ( data.closest(".cp-popup-container").hasClass( 'cp_has_toggle' ) ) {
 
             var toggle_position = data.closest(".cp-popup-container").find('.cp-open-toggle').attr( 'data-position' );

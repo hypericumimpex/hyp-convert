@@ -1,3 +1,15 @@
+Version 1.3.7 June 27, 2019
+- Fix: Multistep Slide-In CTA Form Fields not clickable when Toggle is on.
+- Fix: Full Screen and Welcome Mat CTA - "Field Respective To" option not working.
+- Fix: Schema and Structured data for WP Plugin JS conflict.
+- Fix: Civic Cookie Control 8 Plugin JS Conflict.
+- Fix: Woo Birthday discount vouchers plugin JS Conflict.
+- Fix: Custom Facebook Feed Pro - Extensions Plugin JS Conflict.
+- Fix: WooCommerce Table Rate Shipping Plugin JS Conflict.
+- Fix: Apply Online Plugin JS Conflict.
+- Fix: Bridge Theme JS Conflict.
+- Fix: Sliced Invoices Plugin JS Conflict.
+
 Version 1.3.6 May 15, 2019
 - Fix: Security update with cross-site scripting vulnerability issue.
 

@@ -305,7 +305,7 @@ if ( ! class_exists( 'BSF_Update_Manager' ) ) {
 			$update_required = array();
 
 			if ( $product_type == 'plugins' ) {
-				$all_products = brainstorm_get_all_products( false, true, false );
+				$all_products = $this->prepare_plugins_for_update( brainstorm_get_all_products( false, true, false ) );
 			}
 
 			if ( $product_type == 'themes' ) {
@@ -337,6 +337,22 @@ if ( ! class_exists( 'BSF_Update_Manager' ) ) {
 			}
 
 			return $update_required;
+		}
+
+		/**
+		 * Remove plugins from the updates array which are not installed.
+		 *
+		 * @param Array $plugins
+		 * @return Array of plugins.
+		 */
+		public static function prepare_plugins_for_update( $plugins ) {
+			foreach ( $plugins as $key => $plugin ) {
+				if ( ! isset( $plugin[ 'template' ] ) || ! file_exists( dirname( realpath( WP_PLUGIN_DIR . '/' . $plugin[ 'template' ] ) ) ) ) {
+					unset( $plugins[ $key ] );
+				}
+			}
+
+			return $plugins;
 		}
 
 		public function _maybe_force_check_bsf_product_updates() {
@@ -502,7 +518,7 @@ if ( ! class_exists( 'BSF_Update_Manager' ) ) {
 				$parent_name       = apply_filters( "bsf_product_name_{$parent_id}", brainstrom_product_name( $parent_id ) );
 				$message           = sprintf( __( ' <br>This plugin is came bundled with the <i>%1$s</i>. For receiving updates, you need to register license of <i>%2$s</i> <a href="%3$s">here</a>.' ), $parent_name, $parent_name, $registration_page );
 			} else {
-				$message = sprintf( __( ' <i>Click <a href="%1$s">here</a> to activate your license.</i>' ), $registration_page );
+				$message = sprintf( __( ' <i>Please <a href="%1$s">activate your license</a> to update the plugin.</i>' ), $registration_page );
 			}
 
 			if ( true == self::bsf_allow_beta_updates( $product_id ) && $this->is_beta_version( $plugin_data['new_version'] ) ) {

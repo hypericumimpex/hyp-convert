@@ -9,7 +9,7 @@
  */
 
 // Set current version.
-define( 'CP_V2_VERSION', '1.3.6' );
+define( 'CP_V2_VERSION', '1.3.7' );
 
 if ( ! class_exists( 'CP_V2_Auto_Update' ) ) :
 

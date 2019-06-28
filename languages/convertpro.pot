@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Convert Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Convert Pro 1.3.6\n"
+"Project-Id-Version: Convert Pro 1.3.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/convertpro\n"
-"POT-Creation-Date: 2019-05-15 12:52:58+00:00\n"
+"POT-Creation-Date: 2019-06-27 10:59:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -184,47 +184,47 @@ msgid ""
 "newsletter."
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:332
+#: admin/bsf-core/BSF_License_Manager.php:412
 msgid "Product id is missing."
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:410
+#: admin/bsf-core/BSF_License_Manager.php:490
 msgid ""
 "<p>Click on the button below to activate your license and subscribe to our "
 "newsletter.</p>"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:412
+#: admin/bsf-core/BSF_License_Manager.php:492
 msgid "<p>Enter your purchase key and activate automatic updates.</p>"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:439
+#: admin/bsf-core/BSF_License_Manager.php:519
 msgid "Your license is active."
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:549
-#: admin/bsf-core/BSF_License_Manager.php:564
+#: admin/bsf-core/BSF_License_Manager.php:629
+#: admin/bsf-core/BSF_License_Manager.php:644
 msgid "Activate License"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:552 admin/general-settings.php:19
+#: admin/bsf-core/BSF_License_Manager.php:632 admin/general-settings.php:19
 #: admin/license.php:11
 msgid "License"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:565
+#: admin/bsf-core/BSF_License_Manager.php:645
 msgid "Deactivate License"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:567
+#: admin/bsf-core/BSF_License_Manager.php:647
 msgid "Your license is not active!"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:568
+#: admin/bsf-core/BSF_License_Manager.php:648
 msgid "Your license is activated!"
 msgstr ""
 
-#: admin/bsf-core/BSF_License_Manager.php:614
+#: admin/bsf-core/BSF_License_Manager.php:694
 #: framework/classes/class-cp-framework.php:819
 #: framework/style-options.php:1445 framework/style-options.php:1607
 #: framework/style-options.php:2770 framework/style-options.php:2899
@@ -236,29 +236,31 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:503
+#: admin/bsf-core/BSF_Update_Manager.php:519
 msgid ""
 " <br>This plugin is came bundled with the <i>%1$s</i>. For receiving "
 "updates, you need to register license of <i>%2$s</i> <a "
 "href=\"%3$s\">here</a>."
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:505
-msgid " <i>Click <a href=\"%1$s\">here</a> to activate your license.</i>"
+#: admin/bsf-core/BSF_Update_Manager.php:521
+msgid ""
+" <i>Please <a href=\"%1$s\">activate your license</a> to update the "
+"plugin.</i>"
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:569
-#: admin/bsf-core/BSF_Update_Manager.php:596
+#: admin/bsf-core/BSF_Update_Manager.php:585
+#: admin/bsf-core/BSF_Update_Manager.php:612
 msgid ""
 "Click <a target=\"_blank\" href=\"%1$1s\">here</a> to activate license of "
 "<i>%2$2s</i> to receive automatic updates."
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:575
+#: admin/bsf-core/BSF_Update_Manager.php:591
 msgid "Activate license of <i>%2s</i> to receive automatic updates."
 msgstr ""
 
-#: admin/bsf-core/BSF_Update_Manager.php:581
+#: admin/bsf-core/BSF_Update_Manager.php:597
 msgid ""
 "This plugin is came bundled with the <i>%1$1s</i>. For receiving updates, "
 "you need to register license of <i>%2$2s</i> <a target=\"_blank\" "
@@ -408,54 +410,54 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: admin/bsf-core/index.php:195 admin/bsf-core/index.php:196
+#: admin/bsf-core/index.php:145 admin/bsf-core/index.php:146
 msgid "Extensions"
 msgstr ""
 
-#: admin/bsf-core/index.php:328
+#: admin/bsf-core/index.php:278
 msgid "iMedica Extensions"
 msgstr ""
 
-#: admin/bsf-core/index.php:832
+#: admin/bsf-core/index.php:775
 msgid " requires following plugins to be active : "
 msgstr ""
 
-#: admin/bsf-core/index.php:842
+#: admin/bsf-core/index.php:785
 msgid " requires following plugins to be installed and activated : "
 msgstr ""
 
-#: admin/bsf-core/index.php:851
+#: admin/bsf-core/index.php:794
 msgid "Begin activating plugins"
 msgstr ""
 
-#: admin/bsf-core/index.php:855
+#: admin/bsf-core/index.php:798
 msgid "Begin installing plugins"
 msgstr ""
 
-#: admin/bsf-core/index.php:858
+#: admin/bsf-core/index.php:801
 msgid "Dismiss This Notice"
 msgstr ""
 
-#: admin/bsf-core/index.php:884
+#: admin/bsf-core/index.php:827
 msgid ""
 "Looks like you are on a WordPress Multisite, you will need to install and "
 "network activate %1$s Brainstorm Updater for Multisite %2$s plugin. "
 "Download it from %3$s here %4$s"
 msgstr ""
 
-#: admin/bsf-core/index.php:1201
+#: admin/bsf-core/index.php:1144
 msgid "WordPress Environment"
 msgstr ""
 
-#: admin/bsf-core/index.php:1305
+#: admin/bsf-core/index.php:1248
 msgid "Server Environment"
 msgstr ""
 
-#: admin/bsf-core/index.php:1409
+#: admin/bsf-core/index.php:1352
 msgid "Theme Information"
 msgstr ""
 
-#: admin/bsf-core/index.php:1429
+#: admin/bsf-core/index.php:1372
 msgid "Installed Plugins"
 msgstr ""
 
@@ -515,7 +517,7 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: admin/create-new.php:83 classes/class-cp-v2-admin.php:705
+#: admin/create-new.php:83 classes/class-cp-v2-admin.php:728
 msgid "Delete Template Data"
 msgstr ""
 
@@ -800,7 +802,7 @@ msgid "Edit"
 msgstr ""
 
 #: admin/insights.php:120 admin/insights.php:372
-#: classes/class-cp-v2-admin.php:554
+#: classes/class-cp-v2-admin.php:573
 msgid "Duplicate"
 msgstr ""
 
@@ -951,187 +953,187 @@ msgstr ""
 msgid "Cleared"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440
 msgid "Years"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440
 msgid "Months"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440
 msgid "Weeks"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440
 msgid "Days"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440 framework/style-options.php:1809
 #: framework/style-options.php:1983
 msgid "Hours"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440 framework/style-options.php:1852
 #: framework/style-options.php:2026
 msgid "Minutes"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:413 classes/class-cp-v2-admin.php:453
+#: classes/class-cp-v2-admin.php:432 classes/class-cp-v2-admin.php:472
 #: classes/class-cp-v2-model.php:440 framework/style-options.php:2105
 msgid "Seconds"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442 framework/style-options.php:1694
 msgid "Year"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442 framework/style-options.php:1728
 msgid "Month"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442
 msgid "Week"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442 framework/style-options.php:1759
 #: framework/style-options.php:1932
 msgid "Day"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442
 msgid "Hour"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442
 msgid "Minute"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:414 classes/class-cp-v2-admin.php:454
+#: classes/class-cp-v2-admin.php:433 classes/class-cp-v2-admin.php:473
 #: classes/class-cp-v2-model.php:442
 msgid "Second"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:534
+#: classes/class-cp-v2-admin.php:553
 msgid "Specific Pages, Posts, Categories or Taxonomies."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:535
+#: classes/class-cp-v2-admin.php:554
 msgid "Specific Countries."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:536
+#: classes/class-cp-v2-admin.php:555
 msgid "Select post types"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:537
+#: classes/class-cp-v2-admin.php:556
 msgid "This is a hidden field.This text will not appear at frontend."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:538
+#: classes/class-cp-v2-admin.php:557
 msgid "This is a recaptcha field.This will appear at frontend."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:539
+#: classes/class-cp-v2-admin.php:558
 msgid "Click Here"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:540
+#: classes/class-cp-v2-admin.php:559
 msgid "Search Settings..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:541
+#: classes/class-cp-v2-admin.php:560
 msgid "Search Mailer..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:542 framework/style-customizer.php:421
+#: classes/class-cp-v2-admin.php:561 framework/style-customizer.php:421
 msgid "Search Shapes..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:543
+#: classes/class-cp-v2-admin.php:562
 msgid "Refreshed"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:544
+#: classes/class-cp-v2-admin.php:563
 msgid "Use This"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:545
+#: classes/class-cp-v2-admin.php:564
 msgid "Try Again"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:547
+#: classes/class-cp-v2-admin.php:566
 #. translators: %s link
 msgid "Are you sure you want to delete this call-to-action?"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:548
+#: classes/class-cp-v2-admin.php:567
 msgid "Please select different campaign to process."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:549
+#: classes/class-cp-v2-admin.php:568
 msgid "Campaign name cannot be empty."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:550
+#: classes/class-cp-v2-admin.php:569
 msgid "This name is already registered! Please try again using a different name."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:551
+#: classes/class-cp-v2-admin.php:570
 msgid "Design name cannot be empty."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:552
+#: classes/class-cp-v2-admin.php:571
 msgid "Deleting..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:553
+#: classes/class-cp-v2-admin.php:572
 msgid "Saving..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:555
+#: classes/class-cp-v2-admin.php:574
 msgid "Duplicating..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:556
+#: classes/class-cp-v2-admin.php:575
 msgid "Creating..."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:557
+#: classes/class-cp-v2-admin.php:576
 msgid "SAVED"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:558
+#: classes/class-cp-v2-admin.php:577
 msgid "SAVE CHANGES"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:559 classes/class-cp-v2-model.php:439
+#: classes/class-cp-v2-admin.php:578 classes/class-cp-v2-model.php:439
 msgid ""
 "This form is not connected with any mailer service! Please contact web "
 "administrator."
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:560
+#: classes/class-cp-v2-admin.php:579
 msgid "Do you really want to delete Step"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:561
+#: classes/class-cp-v2-admin.php:580
 msgid "Are you sure you want to delete this ruleset?"
 msgstr ""
 
-#: classes/class-cp-v2-admin.php:714
+#: classes/class-cp-v2-admin.php:737
 msgid "Refresh Cloud Templates"
 msgstr ""
 
@@ -2379,7 +2381,7 @@ msgstr ""
 
 #: framework/style-customizer.php:506
 msgid ""
-"Triggers within a Ruleset work as AND, \n"
+"Triggers within a Ruleset work as AND, \r\n"
 "Triggers from different Ruleset works as OR"
 msgstr ""
 

@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/hypericumimpex/hyp-convert/
  * Author: Romeo C.
  * Author URI: https://github.com/hypericumimpex/
- * Version: 1.3.6
+ * Version: 1.3.7
  * Description: HYP Convert, editor drag-and-drop care vă ajută să creați ferestre pop-up și formulare opt-in pentru a crește conversiile site-ului.
  * Text Domain: convertpro
  *
@@ -14,7 +14,6 @@
 $brainstrom = get_option( 'brainstrom_products' );
 $brainstrom['plugins']['convertpro']['status'] = 'registered';
 update_option( 'brainstrom_products', $brainstrom );
-
 
 add_action( 'plugins_loaded', 'cp_load_convertpro', 1 );
 
